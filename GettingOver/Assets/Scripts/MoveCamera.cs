@@ -4,17 +4,22 @@ using UnityEngine;
 
 public class MoveCamera : MonoBehaviour {
 
-	public GameObject player;
+	[SerializeField]
+	private float xMax, yMax, xMin, yMin;
+
+	[SerializeField]
+	private Transform player;
+
 
 	private Vector3 offset;
 
 	void Start ()
 	{
-		offset = transform.position - player.transform.position;
+		
 	}
 
 	void LateUpdate ()
 	{
-		transform.position = player.transform.position + offset;
+		transform.position = new Vector3 (Mathf.Clamp (player.position.x, xMin, xMax), Mathf.Clamp (player.position.y, yMin, yMax), transform.position.z);
 	}
 }
