@@ -53,6 +53,7 @@ public class MoveHand : MonoBehaviour {
 	}
 
 	void MovebyClick(){
+		Debug.Log (moveWhere);
 		if (moveWhere == 0) {
 			float h = Input.GetAxis ("Fire1") * amount * Time.deltaTime;
 			if (rb.velocity.magnitude < 4.5f)
