@@ -8,4 +8,6 @@
 	public bool haveInternet;
 
 	public bool [] isUnlockItemHat = new bool[8];
+
+	public bool fadeInOut = false;
 }
