@@ -13,10 +13,6 @@ public class MoveCamera : MonoBehaviour {
 
 	private Vector3 offset;
 
-	void Start ()
-	{
-		
-	}
 
 	void LateUpdate ()
 	{
