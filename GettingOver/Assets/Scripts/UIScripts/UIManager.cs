@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour {
 
-	enum BtnHandle { none, playGame, shop, rate, share, sound, shopBrand }
+	enum BtnHandle { none, playGame, shop, rate, share, sound, shopBrand, pause, home, restart, continueButton }
 
 	enum IsSceneName { none, Menu, ShopHat, ShopWeapon}
 
@@ -38,6 +38,9 @@ public class UIManager : MonoBehaviour {
 	[SerializeField]
 	Sprite FrameUnChoose;
 
+	[SerializeField]
+	GameObject pausePanel;
+
 	void Awake() {
 		
 	}
@@ -58,25 +61,37 @@ public class UIManager : MonoBehaviour {
 		uiAnis.MinimizeTarget ();
 
 		switch (btnHandle) {
-			case BtnHandle.none:
-				break;
-			case BtnHandle.playGame:
-				PlayGame ();
-				break;
-			case BtnHandle.shop:
-				Shop ();
-				break;
-			case BtnHandle.rate:
-				Rate ();
-				break;
-			case BtnHandle.share:
-				Share ();
-				break;
-			case BtnHandle.sound:
-				Sound ();
-				break;
-			case BtnHandle.shopBrand:
-				break;
+		case BtnHandle.none:
+			break;
+		case BtnHandle.playGame:
+			PlayGame ();
+			break;
+		case BtnHandle.shop:
+			Shop ();
+			break;
+		case BtnHandle.rate:
+			Rate ();
+			break;
+		case BtnHandle.share:
+			Share ();
+			break;
+		case BtnHandle.sound:
+			Sound ();
+			break;
+		case BtnHandle.shopBrand:
+			break;
+		case BtnHandle.pause:
+			PauseButton ();
+			break;
+		case BtnHandle.home:
+			HomeButton ();
+			break;
+		case BtnHandle.restart:
+			RestartButton ();
+			break;
+		case BtnHandle.continueButton:
+			ContinueButton ();
+			break;
 		}
 	}
 
@@ -98,6 +113,22 @@ public class UIManager : MonoBehaviour {
 
 	void Sound(){
 		
+	}
+
+	void PauseButton(){
+		pausePanel.SetActive (true);
+	}
+
+	void HomeButton(){
+		UnityEngine.SceneManagement.SceneManager.LoadScene ("MenuScene");
+	}
+
+	void RestartButton(){
+		UnityEngine.SceneManagement.SceneManager.LoadScene ("Gameplay");
+	}
+
+	void ContinueButton(){
+		pausePanel.SetActive (false);
 	}
 
 	public void ItemChosen(int indexItem) {
