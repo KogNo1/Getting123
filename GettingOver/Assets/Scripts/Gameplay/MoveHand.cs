@@ -53,12 +53,11 @@ public class MoveHand : MonoBehaviour {
 	}
 
 	void MovebyClick(){
-		Debug.Log (moveWhere);
-		if (moveWhere == 0) {
+		if (moveWhere == 1) {
 			float h = Input.GetAxis ("Fire1") * amount * Time.deltaTime;
 			if (rb.velocity.magnitude < 4.5f)
 				rb.AddTorque (-h * amount);
-		} else {
+		} else if(moveWhere == 2) {
 			float h = Input.GetAxis ("Fire1") * amount * Time.deltaTime;
 			if (rb.velocity.magnitude < 4.5f)
 				rb.AddTorque (h * amount);
@@ -66,10 +65,15 @@ public class MoveHand : MonoBehaviour {
 	}
 
 	public void MoveRight(){
-		moveWhere = 0;
+		moveWhere = 1;
 	}
 
 	public void MoveLeft(){
-		moveWhere = 1;
+		moveWhere = 2;
+	}
+
+	public void pointUp(){
+		moveWhere = 0;
+		rb.velocity = Vector3.zero;
 	}
 }
