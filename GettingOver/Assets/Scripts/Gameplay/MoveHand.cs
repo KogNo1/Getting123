@@ -9,22 +9,33 @@ public class MoveHand : MonoBehaviour {
 
 	float angle;
 
+	int moveWhere;
+
+	int whatControl;
+
 	void Start(){
 		rb = GetComponent<Rigidbody2D> ();
+		moveWhere = 0;
+		whatControl = 0;
 	}
 
 	void Update ()
 	{
-		float h = Input.GetAxis("Horizontal") * amount * Time.deltaTime;
+		if (whatControl == 0) {
+			MovebyClick ();
+		} else if (whatControl == 1) {
+			float h = Input.GetAxis ("Horizontal") * amount * Time.deltaTime;
 
-		if (rb.velocity.magnitude < 4.5f)
-			rb.AddTorque (-h * amount);
-		if (Input.touchCount > 0 && Input.GetTouch (0).phase == TouchPhase.Moved) {
-			Move ();
+			if (rb.velocity.magnitude < 4.5f)
+				rb.AddTorque (-h * amount);
+		} else {
+			if (Input.touchCount > 0 && Input.GetTouch (0).phase == TouchPhase.Moved) {
+				MovebyDrag ();
+			}
 		}
 	}
 
-	void Move(){
+	void MovebyDrag(){
 		Vector3 mousePos = Input.mousePosition;
 		mousePos.z = 0f;
 
@@ -38,7 +49,26 @@ public class MoveHand : MonoBehaviour {
 		if (rb.velocity.magnitude < 4.5f)
 			rb.AddTorque (angle * amount * Time.deltaTime);
 
-		Debug.Log (angle);
 //		transform.rotation = Quaternion.Lerp (transform.rotation, Quaternion.Euler (Vector3.forward * (angle)), amount * Time.deltaTime);
+	}
+
+	void MovebyClick(){
+		if (moveWhere == 0) {
+			float h = Input.GetAxis ("Fire1") * amount * Time.deltaTime;
+			if (rb.velocity.magnitude < 4.5f)
+				rb.AddTorque (-h * amount);
+		} else {
+			float h = Input.GetAxis ("Fire1") * amount * Time.deltaTime;
+			if (rb.velocity.magnitude < 4.5f)
+				rb.AddTorque (h * amount);
+		}
+	}
+
+	public void MoveRight(){
+		moveWhere = 0;
+	}
+
+	public void MoveLeft(){
+		moveWhere = 1;
 	}
 }
