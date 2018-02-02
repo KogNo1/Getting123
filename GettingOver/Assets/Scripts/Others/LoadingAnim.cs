@@ -14,13 +14,13 @@ public class LoadingAnim : MonoBehaviour {
 	float time, timeInter;
 
 	void Start(){
-		timeInter = 0.5f;
+		timeInter = 1f;
 	}
 
 	// Update is called once per frame
 	void Update () {
 		if (time >= timeInter) {
-			timeInter = 1f;
+			timeInter = 1.5f;
 			time = 0;
 		} else {
 			time += Time.deltaTime;
