@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour {
 
+<<<<<<< HEAD
 	enum BtnHandle { none, playGame, shop, rate, share, sound, shopHat, shopWp, shopFoot }
+=======
+	enum BtnHandle { none, playGame, shop, rate, share, sound, shopBrand, pause, home, restart, continueButton }
+>>>>>>> 99f2ec115587273004919c1aa41c152d0821395b
 
 	enum IsSceneName { none, Menu, ShopHat, ShopWeapon, ShopFoot}
 
@@ -59,6 +63,7 @@ public class UIManager : MonoBehaviour {
 	[SerializeField]
 	Sprite FrameUnChoose;
 
+<<<<<<< HEAD
 	[Header("3 type shop")]
 	[SerializeField]
 	UnityEngine.UI.Button obShopWp;
@@ -82,6 +87,10 @@ public class UIManager : MonoBehaviour {
 	Sprite soundOn;
 	[SerializeField]
 	Sprite soundOff;
+=======
+	[SerializeField]
+	GameObject pausePanel;
+>>>>>>> 99f2ec115587273004919c1aa41c152d0821395b
 
 	void Awake() {
 		
@@ -106,6 +115,7 @@ public class UIManager : MonoBehaviour {
 		uiAnis.MinimizeTarget ();
 
 		switch (btnHandle) {
+<<<<<<< HEAD
 			case BtnHandle.none:
 				break;
 			case BtnHandle.playGame:
@@ -139,6 +149,39 @@ public class UIManager : MonoBehaviour {
 			case BtnHandle.shopFoot:
 				ChangeShopFoot ();
 				break;
+=======
+		case BtnHandle.none:
+			break;
+		case BtnHandle.playGame:
+			PlayGame ();
+			break;
+		case BtnHandle.shop:
+			Shop ();
+			break;
+		case BtnHandle.rate:
+			Rate ();
+			break;
+		case BtnHandle.share:
+			Share ();
+			break;
+		case BtnHandle.sound:
+			Sound ();
+			break;
+		case BtnHandle.shopBrand:
+			break;
+		case BtnHandle.pause:
+			PauseButton ();
+			break;
+		case BtnHandle.home:
+			HomeButton ();
+			break;
+		case BtnHandle.restart:
+			RestartButton ();
+			break;
+		case BtnHandle.continueButton:
+			ContinueButton ();
+			break;
+>>>>>>> 99f2ec115587273004919c1aa41c152d0821395b
 		}
 	}
 
@@ -224,6 +267,22 @@ public class UIManager : MonoBehaviour {
 		obShopFoot.enabled = false;
 		obShopFoot.GetComponent<UnityEngine.UI.Image> ().sprite = FrameChoose;
 		shopFootGob.SetActive (true);
+	}
+
+	void PauseButton(){
+		pausePanel.SetActive (true);
+	}
+
+	void HomeButton(){
+		UnityEngine.SceneManagement.SceneManager.LoadScene ("MenuScene");
+	}
+
+	void RestartButton(){
+		UnityEngine.SceneManagement.SceneManager.LoadScene ("Gameplay");
+	}
+
+	void ContinueButton(){
+		pausePanel.SetActive (false);
 	}
 
 	public void ItemChosen(int indexItem) {
