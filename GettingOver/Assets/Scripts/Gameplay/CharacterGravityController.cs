@@ -22,7 +22,7 @@ public class CharacterGravityController : MonoBehaviour {
 	void Update(){
 		if (CharacterGravityController.handGround == false && CharacterGravityController.assground == false) {
 			if (rbBody.gravityScale < 5)
-				rbBody.gravityScale += Time.deltaTime;
+				rbBody.gravityScale += Time.deltaTime * 0.5f;
 			else
 				rbBody.gravityScale = 5;
 		} else {
