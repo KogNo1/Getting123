@@ -13,6 +13,7 @@ public class CheckPoint : MonoBehaviour {
 	int checkpointValue;
 	// Use this for initialization
 	void Start () {
+		//Reset ();
 		checkpointValue = PlayerPrefs.GetInt ("checkpoint", 0);
 		Debug.Log (checkpointValue);
 		transform.position = checkpointList [checkpointValue].transform.position;
@@ -32,5 +33,9 @@ public class CheckPoint : MonoBehaviour {
 				Debug.Log (other.transform.name);
 			}
 		}
+	}
+
+	void Reset(){
+		PlayerPrefs.DeleteAll ();
 	}
 }
