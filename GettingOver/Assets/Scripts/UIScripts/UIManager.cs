@@ -4,13 +4,9 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour {
 
-<<<<<<< HEAD
-	enum BtnHandle { none, playGame, shop, rate, share, sound, shopHat, shopWp, shopFoot }
-=======
 	enum BtnHandle { none, playGame, shop, rate, share, sound, shopBrand, pause, home, restart, continueButton }
->>>>>>> 99f2ec115587273004919c1aa41c152d0821395b
 
-	enum IsSceneName { none, Menu, ShopHat, ShopWeapon, ShopFoot}
+	enum IsSceneName { none, Menu, ShopHat, ShopWeapon}
 
 	[SerializeField]
 	BtnHandle btnHandle = BtnHandle.none;
@@ -21,39 +17,18 @@ public class UIManager : MonoBehaviour {
 	[SerializeField]
 	UIAnis uiAnis;
 
-	[Header("Button Choose")]
 	[SerializeField]
 	UnityEngine.UI.Button [] chooseButtonHat;
-	[SerializeField]
-	UnityEngine.UI.Button [] chooseButtonWp;
-	[SerializeField]
-	UnityEngine.UI.Button [] chooseButtonFoot;
 
-	[Header("Image lock")]
 	[SerializeField]
 	GameObject [] lockImg;
-	[SerializeField]
-	GameObject [] lockImgWp;
-	[SerializeField]
-	GameObject [] lockImgFoot;
 
-	[Header("Button buy")]
 	[SerializeField]
 	GameObject [] buyBtn;
-	[SerializeField]
-	GameObject [] buyBtnWp;
-	[SerializeField]
-	GameObject [] buyBtnFoot;
 
-	[Header("Data files")]
 	[SerializeField]
 	DataReader[] dataHat;
-	[SerializeField]
-	DataReader[] dataWp;
-	[SerializeField]
-	DataReader[] dataFoot;
 
-	[Header("GoldTxt")]
 	[SerializeField]
 	UnityEngine.UI.Text totalGold;
 
@@ -63,34 +38,8 @@ public class UIManager : MonoBehaviour {
 	[SerializeField]
 	Sprite FrameUnChoose;
 
-<<<<<<< HEAD
-	[Header("3 type shop")]
-	[SerializeField]
-	UnityEngine.UI.Button obShopWp;
-	[SerializeField]
-	UnityEngine.UI.Button obShopFoot;
-	[SerializeField]
-	UnityEngine.UI.Button obShopHat;
-
-	[Header("3 type shop GameObject")]
-	[SerializeField]
-	GameObject shopWpGob;
-	[SerializeField]
-	GameObject shopFootGob;
-	[SerializeField]
-	GameObject shopHatGob;
-
-	[Header("Sound button")]
-	[SerializeField]
-	UnityEngine.UI.Image soundBtn;
-	[SerializeField]
-	Sprite soundOn;
-	[SerializeField]
-	Sprite soundOff;
-=======
 	[SerializeField]
 	GameObject pausePanel;
->>>>>>> 99f2ec115587273004919c1aa41c152d0821395b
 
 	void Awake() {
 		
@@ -98,6 +47,7 @@ public class UIManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		//CheckItemChosen ();
 		CheckStatus ();
 
 		DisplayTotalGold ();
@@ -107,49 +57,10 @@ public class UIManager : MonoBehaviour {
 		uiAnis.MaximumTarget ();
 	}
 
-	public void PressButton2() {
-		uiAnis.MaximumTarget2 ();
-	}
-
 	public void UnpressButton() {
 		uiAnis.MinimizeTarget ();
 
 		switch (btnHandle) {
-<<<<<<< HEAD
-			case BtnHandle.none:
-				break;
-			case BtnHandle.playGame:
-				PlayGame ();
-				break;
-			case BtnHandle.shop:
-				Shop ();
-				break;
-			case BtnHandle.rate:
-				Rate ();
-				break;
-			case BtnHandle.share:
-				Share ();
-				break;
-			case BtnHandle.sound:
-				Sound ();
-				break;
-		}
-	}
-
-	public void UnpressButton2() {
-		uiAnis.MinimizeTarget2 ();
-
-		switch (btnHandle) {
-			case BtnHandle.shopHat:
-				ChangeShopHat ();
-				break;
-			case BtnHandle.shopWp:
-				ChangeShopWp ();
-				break;
-			case BtnHandle.shopFoot:
-				ChangeShopFoot ();
-				break;
-=======
 		case BtnHandle.none:
 			break;
 		case BtnHandle.playGame:
@@ -181,7 +92,6 @@ public class UIManager : MonoBehaviour {
 		case BtnHandle.continueButton:
 			ContinueButton ();
 			break;
->>>>>>> 99f2ec115587273004919c1aa41c152d0821395b
 		}
 	}
 
@@ -202,71 +112,7 @@ public class UIManager : MonoBehaviour {
 	}
 
 	void Sound(){
-		//Debug.Log (SaveManager.instance.state.statusSound);
-		if (SaveManager.instance.state.statusSound) {
-			SaveManager.instance.state.statusSound = false;
-			soundBtn.sprite = soundOff;
-			SaveManager.instance.Save ();
-		} else if(SaveManager.instance.state.statusSound == false){
-			SaveManager.instance.state.statusSound = true;
-			soundBtn.sprite = soundOn;
-			SaveManager.instance.Save ();
-		}
-	}
-
-	void CheckSound() {
-		if (soundBtn != null) {
-			if (SaveManager.instance.state.statusSound)
-				soundBtn.sprite = soundOn;
-			else
-				soundBtn.sprite = soundOff;
-		}
-	}
-
-	public void BackButton(string nameBackScene) {
-		UnityEngine.SceneManagement.SceneManager.LoadScene (nameBackScene);
-	}
-
-	void ChangeShopHat(){
-		obShopWp.enabled = true;
-		obShopWp.GetComponent<UnityEngine.UI.Image> ().sprite = FrameUnChoose;
-		shopWpGob.SetActive (false);
-
-		obShopHat.enabled = false;
-		obShopHat.GetComponent<UnityEngine.UI.Image> ().sprite = FrameChoose;
-		shopHatGob.SetActive (true);
-
-		obShopFoot.enabled = true;
-		obShopFoot.GetComponent<UnityEngine.UI.Image> ().sprite = FrameUnChoose;
-		shopFootGob.SetActive (false);
-	}
-
-	void ChangeShopWp(){
-		obShopWp.enabled = false;
-		obShopWp.GetComponent<UnityEngine.UI.Image> ().sprite = FrameChoose;
-		shopWpGob.SetActive (true);
-
-		obShopHat.enabled = true;
-		obShopHat.GetComponent<UnityEngine.UI.Image> ().sprite = FrameUnChoose;
-		shopHatGob.SetActive (false);
-
-		obShopFoot.enabled = true;
-		obShopFoot.GetComponent<UnityEngine.UI.Image> ().sprite = FrameUnChoose;
-		shopFootGob.SetActive (false);
-	}
-
-	void ChangeShopFoot(){
-		obShopWp.enabled = true;
-		obShopWp.GetComponent<UnityEngine.UI.Image> ().sprite = FrameUnChoose;
-		shopWpGob.SetActive (false);
-
-		obShopHat.enabled = true;
-		obShopHat.GetComponent<UnityEngine.UI.Image> ().sprite = FrameUnChoose;
-		shopHatGob.SetActive (false);
-
-		obShopFoot.enabled = false;
-		obShopFoot.GetComponent<UnityEngine.UI.Image> ().sprite = FrameChoose;
-		shopFootGob.SetActive (true);
+		
 	}
 
 	void PauseButton(){
@@ -287,109 +133,35 @@ public class UIManager : MonoBehaviour {
 
 	public void ItemChosen(int indexItem) {
 		switch(isSceneName) {
-			case IsSceneName.ShopHat:
-				if (SaveManager.instance.state.isUnlockItemHat [indexItem]) {
+		case IsSceneName.ShopHat:
+			if (SaveManager.instance.state.isUnlockItemHat [indexItem]) {
 
-					for (int i = 0; i < chooseButtonHat.Length; i++) {
-						if (i == indexItem)
-							chooseButtonHat [i].GetComponent<UnityEngine.UI.Image> ().sprite = FrameChoose;
-						else
-							chooseButtonHat [i].GetComponent<UnityEngine.UI.Image> ().sprite = FrameUnChoose;
-					}
-
-					SaveManager.instance.state.indexHat = indexItem;
-					SaveManager.instance.Save ();
-				}
-			break;
-
-			case IsSceneName.ShopWeapon:
-				if (SaveManager.instance.state.isUnlockItemWp [indexItem]) {
-
-					for (int i = 0; i < chooseButtonWp.Length; i++) {
-						if (i == indexItem)
-							chooseButtonWp [i].GetComponent<UnityEngine.UI.Image> ().sprite = FrameChoose;
-						else
-							chooseButtonWp [i].GetComponent<UnityEngine.UI.Image> ().sprite = FrameUnChoose;
-					}
-
-					SaveManager.instance.state.indexWp = indexItem;
-					SaveManager.instance.Save ();
-				}
-				break;
-
-			case IsSceneName.ShopFoot:
-				if (SaveManager.instance.state.isUnlockItemFoot [indexItem]) {
-
-					for (int i = 0; i < chooseButtonFoot.Length; i++) {
-						if (i == indexItem)
-							chooseButtonFoot [i].GetComponent<UnityEngine.UI.Image> ().sprite = FrameChoose;
-						else
-							chooseButtonFoot [i].GetComponent<UnityEngine.UI.Image> ().sprite = FrameUnChoose;
-					}
-
-					SaveManager.instance.state.indexFoot = indexItem;
-					SaveManager.instance.Save ();
-				}
-				break;
-		}
-	}
-
-	void CheckStatus() {
-		switch (isSceneName) {
-			case IsSceneName.ShopHat:
 				for (int i = 0; i < chooseButtonHat.Length; i++) {
-					if (SaveManager.instance.state.isUnlockItemHat [i]) {
-						lockImg [i].SetActive (false);
-						buyBtn [i].SetActive (false);
-						chooseButtonHat [i].interactable = true;
-					} else {
-						lockImg [i].SetActive (true);
-						buyBtn [i].SetActive (true);
-						chooseButtonHat [i].interactable = false;
-					}
-					
-					if (i == SaveManager.instance.state.indexHat)
+					if (i == indexItem)
 						chooseButtonHat [i].GetComponent<UnityEngine.UI.Image> ().sprite = FrameChoose;
 					else
 						chooseButtonHat [i].GetComponent<UnityEngine.UI.Image> ().sprite = FrameUnChoose;
 				}
-				break;
 
-			case IsSceneName.ShopWeapon:
-				for (int i = 0; i < chooseButtonWp.Length; i++) {
-					if (SaveManager.instance.state.isUnlockItemWp [i]) {
-						lockImgWp [i].SetActive (false);
-						buyBtnWp [i].SetActive (false);
-						chooseButtonWp [i].interactable = true;
-					} else {
-						lockImgWp [i].SetActive (true);
-						buyBtnWp [i].SetActive (true);
-						chooseButtonWp [i].interactable = false;
-					}
-
-					if (i == SaveManager.instance.state.indexWp)
-						chooseButtonWp [i].GetComponent<UnityEngine.UI.Image> ().sprite = FrameChoose;
-					else
-						chooseButtonWp [i].GetComponent<UnityEngine.UI.Image> ().sprite = FrameUnChoose;
-				}
+				SaveManager.instance.state.indexHat = indexItem;
+				SaveManager.instance.Save ();
+			}
 			break;
+		}
+	}
 
-			case IsSceneName.ShopFoot:
-				for (int i = 0; i < chooseButtonFoot.Length; i++) {
-					if (SaveManager.instance.state.isUnlockItemFoot [i]) {
-						lockImgFoot [i].SetActive (false);
-						buyBtnFoot [i].SetActive (false);
-						chooseButtonFoot [i].interactable = true;
-					} else {
-						lockImg [i].SetActive (true);
-						buyBtnFoot [i].SetActive (true);
-						chooseButtonFoot [i].interactable = false;
-					}
-
-					if (i == SaveManager.instance.state.indexFoot)
-						chooseButtonFoot [i].GetComponent<UnityEngine.UI.Image> ().sprite = FrameChoose;
-					else
-						chooseButtonFoot [i].GetComponent<UnityEngine.UI.Image> ().sprite = FrameUnChoose;
+	void CheckStatus() {
+		switch(isSceneName) {
+		case IsSceneName.ShopHat:
+			for (int i = 0; i < chooseButtonHat.Length; i++)
+				if (SaveManager.instance.state.isUnlockItemHat [i]) {
+					lockImg [i].SetActive (false);
+					buyBtn [i].SetActive (false);
+					chooseButtonHat [i].interactable = true;
+				} else {
+					lockImg [i].SetActive (true);
+					buyBtn [i].SetActive (true);
+					chooseButtonHat [i].interactable = false;
 				}
 			break;
 		}
@@ -407,32 +179,6 @@ public class UIManager : MonoBehaviour {
 
 					SaveManager.instance.state.isUnlockItemHat [indexItem] = true;
 					SaveManager.instance.state.gold -= dataHat [indexItem].dataObject.price;
-					SaveManager.instance.Save ();
-
-					CheckStatus ();
-
-					DisplayTotalGold ();
-				}
-			break;
-
-			case IsSceneName.ShopWeapon:
-				if (SaveManager.instance.state.gold >= dataWp[indexItem].dataObject.price) {
-
-					SaveManager.instance.state.isUnlockItemWp [indexItem] = true;
-					SaveManager.instance.state.gold -= dataWp [indexItem].dataObject.price;
-					SaveManager.instance.Save ();
-
-					CheckStatus ();
-
-					DisplayTotalGold ();
-				}
-			break;
-
-			case IsSceneName.ShopFoot:
-				if (SaveManager.instance.state.gold >= dataFoot[indexItem].dataObject.price) {
-
-					SaveManager.instance.state.isUnlockItemFoot [indexItem] = true;
-					SaveManager.instance.state.gold -= dataFoot [indexItem].dataObject.price;
 					SaveManager.instance.Save ();
 
 					CheckStatus ();

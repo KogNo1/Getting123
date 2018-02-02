@@ -350,38 +350,12 @@ MonoBehaviour:
     inActiveSpr: {fileID: 0}
     activeSpr: {fileID: 0}
   chooseButtonHat: []
-<<<<<<< HEAD
-  chooseButtonWp: []
-  chooseButtonFoot: []
-  lockImg: []
-  lockImgWp: []
-  lockImgFoot: []
-  buyBtn: []
-  buyBtnWp: []
-  buyBtnFoot: []
-  dataHat: []
-  dataWp: []
-  dataFoot: []
-  totalGold: {fileID: 0}
-  FrameChoose: {fileID: 0}
-  FrameUnChoose: {fileID: 0}
-  obShopWp: {fileID: 0}
-  obShopFoot: {fileID: 0}
-  obShopHat: {fileID: 0}
-  shopWpGob: {fileID: 0}
-  shopFootGob: {fileID: 0}
-  shopHatGob: {fileID: 0}
-  soundBtn: {fileID: 232575846}
-  soundOn: {fileID: 21300000, guid: 5157139415eaa4fc3bb26a5e28628b2b, type: 3}
-  soundOff: {fileID: 21300000, guid: 9867f8136ec23437ea44b23c80c484c5, type: 3}
-=======
   lockImg: []
   buyBtn: []
   dataHat: []
   totalGold: {fileID: 0}
   FrameChoose: {fileID: 0}
   FrameUnChoose: {fileID: 0}
->>>>>>> 99f2ec115587273004919c1aa41c152d0821395b
 --- !u!1 &235165584
 GameObject:
   m_ObjectHideFlags: 0
@@ -607,34 +581,6 @@ MonoBehaviour:
     maxScale: {x: 1.2, y: 1.2, z: 1}
     originScale: {x: 1.1, y: 1.1, z: 1}
     minScale: {x: 1, y: 1, z: 1}
-<<<<<<< HEAD
-    inActiveSpr: {fileID: 0}
-    activeSpr: {fileID: 0}
-  chooseButtonHat: []
-  chooseButtonWp: []
-  chooseButtonFoot: []
-  lockImg: []
-  lockImgWp: []
-  lockImgFoot: []
-  buyBtn: []
-  buyBtnWp: []
-  buyBtnFoot: []
-  dataHat: []
-  dataWp: []
-  dataFoot: []
-  totalGold: {fileID: 0}
-  FrameChoose: {fileID: 0}
-  FrameUnChoose: {fileID: 0}
-  obShopWp: {fileID: 0}
-  obShopFoot: {fileID: 0}
-  obShopHat: {fileID: 0}
-  shopWpGob: {fileID: 0}
-  shopFootGob: {fileID: 0}
-  shopHatGob: {fileID: 0}
-  soundBtn: {fileID: 0}
-  soundOn: {fileID: 0}
-  soundOff: {fileID: 0}
-=======
     inActiveSpr: {fileID: 21300000, guid: 6b8a7c97ffdd841d7aafc232d41a6e01, type: 3}
     activeSpr: {fileID: 21300000, guid: bc7c6191526c34a4b9d87816bcbf78ab, type: 3}
   chooseButtonHat: []
@@ -644,7 +590,6 @@ MonoBehaviour:
   totalGold: {fileID: 0}
   FrameChoose: {fileID: 0}
   FrameUnChoose: {fileID: 0}
->>>>>>> 99f2ec115587273004919c1aa41c152d0821395b
 --- !u!1 &509228507
 GameObject:
   m_ObjectHideFlags: 0
@@ -783,38 +728,12 @@ MonoBehaviour:
     inActiveSpr: {fileID: 0}
     activeSpr: {fileID: 0}
   chooseButtonHat: []
-<<<<<<< HEAD
-  chooseButtonWp: []
-  chooseButtonFoot: []
-  lockImg: []
-  lockImgWp: []
-  lockImgFoot: []
-  buyBtn: []
-  buyBtnWp: []
-  buyBtnFoot: []
-  dataHat: []
-  dataWp: []
-  dataFoot: []
-  totalGold: {fileID: 0}
-  FrameChoose: {fileID: 0}
-  FrameUnChoose: {fileID: 0}
-  obShopWp: {fileID: 0}
-  obShopFoot: {fileID: 0}
-  obShopHat: {fileID: 0}
-  shopWpGob: {fileID: 0}
-  shopFootGob: {fileID: 0}
-  shopHatGob: {fileID: 0}
-  soundBtn: {fileID: 0}
-  soundOn: {fileID: 0}
-  soundOff: {fileID: 0}
-=======
   lockImg: []
   buyBtn: []
   dataHat: []
   totalGold: {fileID: 0}
   FrameChoose: {fileID: 0}
   FrameUnChoose: {fileID: 0}
->>>>>>> 99f2ec115587273004919c1aa41c152d0821395b
 --- !u!1 &740906283
 GameObject:
   m_ObjectHideFlags: 0
@@ -1176,34 +1095,6 @@ MonoBehaviour:
     maxScale: {x: 1.2, y: 1.2, z: 1}
     originScale: {x: 1.1, y: 1.1, z: 1}
     minScale: {x: 1, y: 1, z: 1}
-<<<<<<< HEAD
-    inActiveSpr: {fileID: 0}
-    activeSpr: {fileID: 0}
-  chooseButtonHat: []
-  chooseButtonWp: []
-  chooseButtonFoot: []
-  lockImg: []
-  lockImgWp: []
-  lockImgFoot: []
-  buyBtn: []
-  buyBtnWp: []
-  buyBtnFoot: []
-  dataHat: []
-  dataWp: []
-  dataFoot: []
-  totalGold: {fileID: 0}
-  FrameChoose: {fileID: 0}
-  FrameUnChoose: {fileID: 0}
-  obShopWp: {fileID: 0}
-  obShopFoot: {fileID: 0}
-  obShopHat: {fileID: 0}
-  shopWpGob: {fileID: 0}
-  shopFootGob: {fileID: 0}
-  shopHatGob: {fileID: 0}
-  soundBtn: {fileID: 0}
-  soundOn: {fileID: 0}
-  soundOff: {fileID: 0}
-=======
     inActiveSpr: {fileID: 21300000, guid: 6b8a7c97ffdd841d7aafc232d41a6e01, type: 3}
     activeSpr: {fileID: 21300000, guid: bc7c6191526c34a4b9d87816bcbf78ab, type: 3}
   chooseButtonHat: []
@@ -1213,7 +1104,6 @@ MonoBehaviour:
   totalGold: {fileID: 0}
   FrameChoose: {fileID: 0}
   FrameUnChoose: {fileID: 0}
->>>>>>> 99f2ec115587273004919c1aa41c152d0821395b
 --- !u!114 &1019648142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1399,38 +1289,12 @@ MonoBehaviour:
     inActiveSpr: {fileID: 0}
     activeSpr: {fileID: 0}
   chooseButtonHat: []
-<<<<<<< HEAD
-  chooseButtonWp: []
-  chooseButtonFoot: []
-  lockImg: []
-  lockImgWp: []
-  lockImgFoot: []
-  buyBtn: []
-  buyBtnWp: []
-  buyBtnFoot: []
-  dataHat: []
-  dataWp: []
-  dataFoot: []
-  totalGold: {fileID: 0}
-  FrameChoose: {fileID: 0}
-  FrameUnChoose: {fileID: 0}
-  obShopWp: {fileID: 0}
-  obShopFoot: {fileID: 0}
-  obShopHat: {fileID: 0}
-  shopWpGob: {fileID: 0}
-  shopFootGob: {fileID: 0}
-  shopHatGob: {fileID: 0}
-  soundBtn: {fileID: 0}
-  soundOn: {fileID: 0}
-  soundOff: {fileID: 0}
-=======
   lockImg: []
   buyBtn: []
   dataHat: []
   totalGold: {fileID: 0}
   FrameChoose: {fileID: 0}
   FrameUnChoose: {fileID: 0}
->>>>>>> 99f2ec115587273004919c1aa41c152d0821395b
 --- !u!1 &1883346384
 GameObject:
   m_ObjectHideFlags: 0
