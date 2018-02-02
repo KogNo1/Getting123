@@ -9,32 +9,32 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1721640710373048}
+  m_RootGameObject: {fileID: 1214376646520724}
   m_IsPrefabParent: 1
---- !u!1 &1721640710373048
+--- !u!1 &1214376646520724
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4792148970110358}
-  - component: {fileID: 212910439086924744}
-  - component: {fileID: 60465066776488244}
-  - component: {fileID: 50760327837942598}
+  - component: {fileID: 4772216018796648}
+  - component: {fileID: 212900742199572858}
+  - component: {fileID: 60923597806135620}
+  - component: {fileID: 50938987431231204}
   m_Layer: 0
-  m_Name: Lollipop
+  m_Name: LollipopBlue
   m_TagString: Elements
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4792148970110358
+--- !u!4 &4772216018796648
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1721640710373048}
+  m_GameObject: {fileID: 1214376646520724}
   m_LocalRotation: {x: -0, y: -0, z: 0.90054053, w: -0.4347721}
   m_LocalPosition: {x: 176.84, y: 6.72, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
@@ -42,13 +42,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 231.54199}
---- !u!50 &50760327837942598
+--- !u!50 &50938987431231204
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1721640710373048}
+  m_GameObject: {fileID: 1214376646520724}
   m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -62,12 +62,12 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!60 &60465066776488244
+--- !u!60 &60923597806135620
 PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1721640710373048}
+  m_GameObject: {fileID: 1214376646520724}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -114,12 +114,12 @@ PolygonCollider2D:
       - {x: 0.125, y: 0.29999998}
       - {x: 0.175, y: 0.29999998}
       - {x: 0.345, y: 0.34}
---- !u!212 &212910439086924744
+--- !u!212 &212900742199572858
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1721640710373048}
+  m_GameObject: {fileID: 1214376646520724}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -146,7 +146,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6df700546f93549ac906d4e635086716, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 98c219cf3022344f6b6d6a25bb17d95f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
