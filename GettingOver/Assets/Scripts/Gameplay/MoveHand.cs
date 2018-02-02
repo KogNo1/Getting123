@@ -74,7 +74,6 @@ public class MoveHand : MonoBehaviour {
 
 	public void pointUp(){
 		moveWhere = 0;
-//		rb.velocity = Vector3.zero;
-		rb.Sleep();
+		rb.velocity = Vector3.zero;
 	}
 }

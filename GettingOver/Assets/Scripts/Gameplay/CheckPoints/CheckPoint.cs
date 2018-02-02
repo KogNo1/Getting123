@@ -15,7 +15,7 @@ public class CheckPoint : MonoBehaviour {
 	void Start () {
 		//Reset ();
 		checkpointValue = PlayerPrefs.GetInt ("checkpoint", 0);
-		Debug.Log (checkpointValue);
+
 		transform.position = checkpointList [checkpointValue].transform.position;
 		stick.transform.position = checkpointList [checkpointValue].transform.position + new Vector3 (0.6f, 1.5f, 0);
 	}
@@ -30,7 +30,6 @@ public class CheckPoint : MonoBehaviour {
 			if (temp > checkpointValue) 
 			{
 				PlayerPrefs.SetInt ("checkpoint", temp);
-				Debug.Log (other.transform.name);
 			}
 		}
 	}

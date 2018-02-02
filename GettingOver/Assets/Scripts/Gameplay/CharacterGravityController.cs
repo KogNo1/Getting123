@@ -12,21 +12,30 @@ public class CharacterGravityController : MonoBehaviour {
 	[SerializeField]
 	Rigidbody2D rbBody;
 
+	[SerializeField]
+	float timeInter = 0.5f;
+
+	float time;
+
 	public static bool handGround, assground;
 
 	// Use this for initialization
 	void Start () {
-
+		time = 0;
 	}
 
 	void Update(){
 		if (CharacterGravityController.handGround == false && CharacterGravityController.assground == false) {
-			if (rbBody.gravityScale < 5)
-				rbBody.gravityScale += Time.deltaTime * 0.5f;
-			else
-				rbBody.gravityScale = 5;
+			time += Time.deltaTime;
+			if (time >= timeInter) {
+				if (rbBody.gravityScale < 5)
+					rbBody.gravityScale += Time.deltaTime * 0.5f;
+				else
+					rbBody.gravityScale = 5;
+			}
 		} else {
 			rbBody.gravityScale = 1;
+			time = 0;
 		}
 	}
 
