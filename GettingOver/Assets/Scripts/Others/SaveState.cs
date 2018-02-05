@@ -7,6 +7,8 @@
 	public int indexHand;
 	public bool haveInternet;
 
+	public int checkpoint = 0;
+
 	public bool [] isUnlockItemHat = new bool[8];
 
 	public bool fadeInOut = false;

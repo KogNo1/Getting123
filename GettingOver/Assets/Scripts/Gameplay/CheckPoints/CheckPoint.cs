@@ -13,8 +13,7 @@ public class CheckPoint : MonoBehaviour {
 	int checkpointValue;
 	// Use this for initialization
 	void Start () {
-		//Reset ();
-		checkpointValue = PlayerPrefs.GetInt ("checkpoint", 0);
+		checkpointValue = SaveManager.instance.state.checkpoint;
 
 		transform.position = checkpointList [checkpointValue].transform.position;
 		stick.transform.position = checkpointList [checkpointValue].transform.position + new Vector3 (0.6f, 1.5f, 0);
@@ -29,12 +28,9 @@ public class CheckPoint : MonoBehaviour {
 			int temp = int.Parse (other.transform.name);
 			if (temp > checkpointValue) 
 			{
-				PlayerPrefs.SetInt ("checkpoint", temp);
+				SaveManager.instance.state.checkpoint = temp;
+				SaveManager.instance.Save ();
 			}
 		}
-	}
-
-	void Reset(){
-		PlayerPrefs.DeleteAll ();
 	}
 }
