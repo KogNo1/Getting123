@@ -38,4 +38,12 @@ public class UIAnis {
 		if (targetSpr != null && inActiveSpr != null)
 			targetSpr.sprite = inActiveSpr;
 	}
+
+	public void MaximumTarget2() {
+		target.transform.localScale = maxScale;
+	}
+
+	public void MinimizeTarget2() {
+		target.transform.localScale = originScale;
+	}
 }

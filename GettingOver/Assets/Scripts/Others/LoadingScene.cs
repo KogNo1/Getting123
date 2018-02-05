@@ -32,7 +32,10 @@ public class LoadingScene : MonoBehaviour {
 		//ads.RequestBanner ();
 		//ads.RequestInterstitial ();
 		//ads.RequestRewardBasedVideo ();
+		//ads.RequestRewardBasedVideo ();
 		SaveManager.instance.state.isUnlockItemHat[0] = true;
+		SaveManager.instance.state.isUnlockItemWp [0] = true;
+		SaveManager.instance.state.isUnlockItemFoot [0] = true;
 		SaveManager.instance.Save ();
 //		StartCoroutine (Loading ());
 	}
