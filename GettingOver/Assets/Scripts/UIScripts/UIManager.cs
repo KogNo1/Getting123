@@ -6,7 +6,7 @@ public class UIManager : MonoBehaviour {
 
 	enum BtnHandle { none, playGame, shop, rate, share, sound, shopBrand, pause, home, restart, continueButton }
 
-	enum IsSceneName { none, Menu, ShopHat, ShopWeapon}
+	enum IsSceneName { none, Menu, ShopHat, ShopWeapon, ShopFoot}
 
 	[SerializeField]
 	BtnHandle btnHandle = BtnHandle.none;

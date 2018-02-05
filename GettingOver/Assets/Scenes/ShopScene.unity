@@ -394,7 +394,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreLayout: 0
-  m_MinWidth: 1217.8103
+  m_MinWidth: 1217.7231
   m_MinHeight: -1
   m_PreferredWidth: -1
   m_PreferredHeight: -1
@@ -765,7 +765,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreLayout: 0
-  m_MinWidth: 1217.8103
+  m_MinWidth: 1217.7231
   m_MinHeight: -1
   m_PreferredWidth: -1
   m_PreferredHeight: -1
@@ -972,7 +972,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreLayout: 0
-  m_MinWidth: 1217.8103
+  m_MinWidth: 1217.7231
   m_MinHeight: -1
   m_PreferredWidth: -1
   m_PreferredHeight: -1
@@ -1173,7 +1173,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 2204.3628, y: 0}
+  m_AnchoredPosition: {x: 2619.5833, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &325686575
@@ -2026,7 +2026,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreLayout: 0
-  m_MinWidth: 1217.8103
+  m_MinWidth: 1217.7231
   m_MinHeight: -1
   m_PreferredWidth: -1
   m_PreferredHeight: -1
@@ -2335,6 +2335,95 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 668715973}
+--- !u!1 &710687369
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 710687371}
+  - component: {fileID: 710687370}
+  m_Layer: 0
+  m_Name: UIManager_Weapon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!114 &710687370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 710687369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0562f31d262fe4fe3b17921e25bc6d12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  btnHandle: 0
+  isSceneName: 2
+  uiAnis:
+    target: {fileID: 0}
+    maxScale: {x: 0, y: 0, z: 0}
+    originScale: {x: 0, y: 0, z: 0}
+    minScale: {x: 0, y: 0, z: 0}
+    inActiveSpr: {fileID: 0}
+    activeSpr: {fileID: 0}
+  chooseButtonHat:
+  - {fileID: 1491928304}
+  - {fileID: 1452564115}
+  - {fileID: 662432040}
+  - {fileID: 1696504222}
+  - {fileID: 318605280}
+  - {fileID: 437214020}
+  - {fileID: 866506485}
+  - {fileID: 492275197}
+  lockImg:
+  - {fileID: 143666445}
+  - {fileID: 2057457749}
+  - {fileID: 1738929297}
+  - {fileID: 1395765946}
+  - {fileID: 1606710976}
+  - {fileID: 1745789570}
+  - {fileID: 461759649}
+  - {fileID: 103570359}
+  buyBtn:
+  - {fileID: 177658107}
+  - {fileID: 523339769}
+  - {fileID: 1910863078}
+  - {fileID: 415508755}
+  - {fileID: 1652610717}
+  - {fileID: 1188360831}
+  - {fileID: 390057723}
+  - {fileID: 1754416515}
+  dataHat:
+  - {fileID: 1274557383}
+  - {fileID: 1529901996}
+  - {fileID: 580568128}
+  - {fileID: 1071845484}
+  - {fileID: 215285641}
+  - {fileID: 1925711760}
+  - {fileID: 117446433}
+  - {fileID: 318566668}
+  totalGold: {fileID: 1998210716}
+  FrameChoose: {fileID: 21300000, guid: bc7c6191526c34a4b9d87816bcbf78ab, type: 3}
+  FrameUnChoose: {fileID: 21300000, guid: 6b8a7c97ffdd841d7aafc232d41a6e01, type: 3}
+  pausePanel: {fileID: 0}
+--- !u!4 &710687371
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 710687369}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &714516355
 GameObject:
   m_ObjectHideFlags: 0
@@ -2419,7 +2508,7 @@ GameObject:
   - component: {fileID: 857815726}
   - component: {fileID: 857815727}
   m_Layer: 0
-  m_Name: UIManager
+  m_Name: UIManager_Hat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3118,7 +3207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreLayout: 0
-  m_MinWidth: 1217.8103
+  m_MinWidth: 1217.7231
   m_MinHeight: -1
   m_PreferredWidth: -1
   m_PreferredHeight: -1
@@ -3361,7 +3450,7 @@ GameObject:
   - component: {fileID: 1193517237}
   - component: {fileID: 1193517236}
   m_Layer: 5
-  m_Name: Scroll Snap Horizontal Multiple
+  m_Name: Shop_Hat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3536,7 +3625,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreLayout: 0
-  m_MinWidth: 1217.8103
+  m_MinWidth: 1217.7231
   m_MinHeight: -1
   m_PreferredWidth: -1
   m_PreferredHeight: -1
@@ -3968,7 +4057,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreLayout: 0
-  m_MinWidth: 1217.8103
+  m_MinWidth: 1217.7231
   m_MinHeight: -1
   m_PreferredWidth: -1
   m_PreferredHeight: -1
@@ -4008,6 +4097,95 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1529901994}
+--- !u!1 &1603138382
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1603138384}
+  - component: {fileID: 1603138383}
+  m_Layer: 0
+  m_Name: UIManager_Foot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!114 &1603138383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1603138382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0562f31d262fe4fe3b17921e25bc6d12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  btnHandle: 0
+  isSceneName: 2
+  uiAnis:
+    target: {fileID: 0}
+    maxScale: {x: 0, y: 0, z: 0}
+    originScale: {x: 0, y: 0, z: 0}
+    minScale: {x: 0, y: 0, z: 0}
+    inActiveSpr: {fileID: 0}
+    activeSpr: {fileID: 0}
+  chooseButtonHat:
+  - {fileID: 1491928304}
+  - {fileID: 1452564115}
+  - {fileID: 662432040}
+  - {fileID: 1696504222}
+  - {fileID: 318605280}
+  - {fileID: 437214020}
+  - {fileID: 866506485}
+  - {fileID: 492275197}
+  lockImg:
+  - {fileID: 143666445}
+  - {fileID: 2057457749}
+  - {fileID: 1738929297}
+  - {fileID: 1395765946}
+  - {fileID: 1606710976}
+  - {fileID: 1745789570}
+  - {fileID: 461759649}
+  - {fileID: 103570359}
+  buyBtn:
+  - {fileID: 177658107}
+  - {fileID: 523339769}
+  - {fileID: 1910863078}
+  - {fileID: 415508755}
+  - {fileID: 1652610717}
+  - {fileID: 1188360831}
+  - {fileID: 390057723}
+  - {fileID: 1754416515}
+  dataHat:
+  - {fileID: 1274557383}
+  - {fileID: 1529901996}
+  - {fileID: 580568128}
+  - {fileID: 1071845484}
+  - {fileID: 215285641}
+  - {fileID: 1925711760}
+  - {fileID: 117446433}
+  - {fileID: 318566668}
+  totalGold: {fileID: 1998210716}
+  FrameChoose: {fileID: 21300000, guid: bc7c6191526c34a4b9d87816bcbf78ab, type: 3}
+  FrameUnChoose: {fileID: 21300000, guid: 6b8a7c97ffdd841d7aafc232d41a6e01, type: 3}
+  pausePanel: {fileID: 0}
+--- !u!4 &1603138384
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1603138382}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1606710976
 GameObject:
   m_ObjectHideFlags: 0
@@ -5406,7 +5584,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreLayout: 0
-  m_MinWidth: 1217.8103
+  m_MinWidth: 1217.7231
   m_MinHeight: -1
   m_PreferredWidth: -1
   m_PreferredHeight: -1
