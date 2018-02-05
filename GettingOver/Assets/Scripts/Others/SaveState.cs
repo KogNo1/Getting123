@@ -8,7 +8,7 @@
 	public int indexFoot;
 	public bool haveInternet;
 
-	public int checkpoint = 3;
+	public int checkpoint = 0;
 
 	public bool [] isUnlockItemHat = new bool[8];
 	public bool [] isUnlockItemWp = new bool[8];
