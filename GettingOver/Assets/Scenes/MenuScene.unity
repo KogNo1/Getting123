@@ -350,12 +350,29 @@ MonoBehaviour:
     inActiveSpr: {fileID: 0}
     activeSpr: {fileID: 0}
   chooseButtonHat: []
+  chooseButtonWp: []
+  chooseButtonFoot: []
   lockImg: []
+  lockImgWp: []
+  lockImgFoot: []
   buyBtn: []
+  buyBtnWp: []
+  buyBtnFoot: []
   dataHat: []
+  dataWp: []
+  dataFoot: []
   totalGold: {fileID: 0}
   FrameChoose: {fileID: 0}
   FrameUnChoose: {fileID: 0}
+  obShopWp: {fileID: 0}
+  obShopFoot: {fileID: 0}
+  obShopHat: {fileID: 0}
+  shopWpGob: {fileID: 0}
+  shopFootGob: {fileID: 0}
+  shopHatGob: {fileID: 0}
+  soundBtn: {fileID: 0}
+  soundOn: {fileID: 0}
+  soundOff: {fileID: 0}
   pausePanel: {fileID: 0}
 --- !u!1 &235165584
 GameObject:
@@ -585,12 +602,29 @@ MonoBehaviour:
     inActiveSpr: {fileID: 21300000, guid: 6b8a7c97ffdd841d7aafc232d41a6e01, type: 3}
     activeSpr: {fileID: 21300000, guid: bc7c6191526c34a4b9d87816bcbf78ab, type: 3}
   chooseButtonHat: []
+  chooseButtonWp: []
+  chooseButtonFoot: []
   lockImg: []
+  lockImgWp: []
+  lockImgFoot: []
   buyBtn: []
+  buyBtnWp: []
+  buyBtnFoot: []
   dataHat: []
+  dataWp: []
+  dataFoot: []
   totalGold: {fileID: 0}
   FrameChoose: {fileID: 0}
   FrameUnChoose: {fileID: 0}
+  obShopWp: {fileID: 0}
+  obShopFoot: {fileID: 0}
+  obShopHat: {fileID: 0}
+  shopWpGob: {fileID: 0}
+  shopFootGob: {fileID: 0}
+  shopHatGob: {fileID: 0}
+  soundBtn: {fileID: 0}
+  soundOn: {fileID: 0}
+  soundOff: {fileID: 0}
   pausePanel: {fileID: 0}
 --- !u!1 &509228507
 GameObject:
@@ -730,12 +764,29 @@ MonoBehaviour:
     inActiveSpr: {fileID: 0}
     activeSpr: {fileID: 0}
   chooseButtonHat: []
+  chooseButtonWp: []
+  chooseButtonFoot: []
   lockImg: []
+  lockImgWp: []
+  lockImgFoot: []
   buyBtn: []
+  buyBtnWp: []
+  buyBtnFoot: []
   dataHat: []
+  dataWp: []
+  dataFoot: []
   totalGold: {fileID: 0}
   FrameChoose: {fileID: 0}
   FrameUnChoose: {fileID: 0}
+  obShopWp: {fileID: 0}
+  obShopFoot: {fileID: 0}
+  obShopHat: {fileID: 0}
+  shopWpGob: {fileID: 0}
+  shopFootGob: {fileID: 0}
+  shopHatGob: {fileID: 0}
+  soundBtn: {fileID: 0}
+  soundOn: {fileID: 0}
+  soundOff: {fileID: 0}
   pausePanel: {fileID: 0}
 --- !u!1 &740906283
 GameObject:
@@ -1101,12 +1152,29 @@ MonoBehaviour:
     inActiveSpr: {fileID: 21300000, guid: 6b8a7c97ffdd841d7aafc232d41a6e01, type: 3}
     activeSpr: {fileID: 21300000, guid: bc7c6191526c34a4b9d87816bcbf78ab, type: 3}
   chooseButtonHat: []
+  chooseButtonWp: []
+  chooseButtonFoot: []
   lockImg: []
+  lockImgWp: []
+  lockImgFoot: []
   buyBtn: []
+  buyBtnWp: []
+  buyBtnFoot: []
   dataHat: []
+  dataWp: []
+  dataFoot: []
   totalGold: {fileID: 0}
   FrameChoose: {fileID: 0}
   FrameUnChoose: {fileID: 0}
+  obShopWp: {fileID: 0}
+  obShopFoot: {fileID: 0}
+  obShopHat: {fileID: 0}
+  shopWpGob: {fileID: 0}
+  shopFootGob: {fileID: 0}
+  shopHatGob: {fileID: 0}
+  soundBtn: {fileID: 0}
+  soundOn: {fileID: 0}
+  soundOff: {fileID: 0}
   pausePanel: {fileID: 0}
 --- !u!114 &1019648142
 MonoBehaviour:
@@ -1293,12 +1361,29 @@ MonoBehaviour:
     inActiveSpr: {fileID: 0}
     activeSpr: {fileID: 0}
   chooseButtonHat: []
+  chooseButtonWp: []
+  chooseButtonFoot: []
   lockImg: []
+  lockImgWp: []
+  lockImgFoot: []
   buyBtn: []
+  buyBtnWp: []
+  buyBtnFoot: []
   dataHat: []
+  dataWp: []
+  dataFoot: []
   totalGold: {fileID: 0}
   FrameChoose: {fileID: 0}
   FrameUnChoose: {fileID: 0}
+  obShopWp: {fileID: 0}
+  obShopFoot: {fileID: 0}
+  obShopHat: {fileID: 0}
+  shopWpGob: {fileID: 0}
+  shopFootGob: {fileID: 0}
+  shopHatGob: {fileID: 0}
+  soundBtn: {fileID: 0}
+  soundOn: {fileID: 0}
+  soundOff: {fileID: 0}
   pausePanel: {fileID: 0}
 --- !u!1 &1883346384
 GameObject:
