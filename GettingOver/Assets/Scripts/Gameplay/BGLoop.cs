@@ -19,19 +19,21 @@ public class BGLoop : MonoBehaviour {
 	void Start () {
 		currentBG = 0;
 		for (int i = 0; i < numBG; i++) {
-			if (i < BGImagePrefab.Count){
-				currentBG = i;
+			if (currentBG < BGImagePrefab.Count){
 				BGImage.Add (Instantiate<Transform> (BGImagePrefab [currentBG], new Vector3 (0, 5, 0), BGImagePrefab [currentBG].rotation));
 			}
 			else{
-				currentBG = i - BGImagePrefab.Count;
+				currentBG = 0;
 				BGImage.Add (Instantiate<Transform> (BGImagePrefab [currentBG], new Vector3 (0, 5, 0), BGImagePrefab [currentBG].rotation));
 			}
+			currentBG++;
 		}
 	}
 
 	// Update is called once per frame
 	void Update () {
-		
+		for (int i = 1; i < BGImage.Count; i++) {
+			BGImage [i].position = new Vector3 (BGImage [i - 1].position.x + 88, 5, 0);
+		}
 	}
 }

@@ -1137,7 +1137,7 @@ MonoBehaviour:
   - {fileID: 4455521806619116, guid: 1ab62cb5115034fc6a05400361923e8e, type: 2}
   - {fileID: 4215603685004790, guid: ee07267bc4af641638f8f3342b6fbcce, type: 2}
   BGImage: []
-  numBG: 16
+  numBG: 100
   currentBG: 0
 --- !u!4 &217642078
 Transform:
