@@ -548,7 +548,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xMax: Infinity
-  yMax: 20
+  yMax: 25
   xMin: 0
   yMin: -2
   player: {fileID: 1711459097}
@@ -871,7 +871,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.02, y: 0.165}
-    oldSize: {x: 2.5, y: 3.95}
+    oldSize: {x: 5, y: 5}
     newSize: {x: 20, y: 12.37}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -879,72 +879,73 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 1.2609782, y: -0.15826511}
-      - {x: 1.2858646, y: -0.032760143}
-      - {x: 1.3103596, y: 0.08906424}
-      - {x: 1.3395452, y: 0.22825003}
-      - {x: 1.3657601, y: 0.36069322}
-      - {x: 1.3820201, y: 0.4568169}
-      - {x: 1.3977526, y: 0.5849922}
-      - {x: 1.49, y: 1.1082499}
-      - {x: 1.5115377, y: 1.4382501}
-      - {x: 1.5323063, y: 1.6628656}
-      - {x: 1.5799999, y: 2.2082498}
-      - {x: 1.62, y: 2.33825}
-      - {x: 1.7638465, y: 2.380559}
-      - {x: 1.863078, y: 2.3159432}
-      - {x: 1.9069246, y: 2.03825}
-      - {x: 2.19, y: 1.9882499}
-      - {x: 2.3, y: 1.9782499}
-      - {x: 2.37, y: 2.05825}
-      - {x: 2.4199998, y: 2.1482499}
-      - {x: 2.454616, y: 2.6674957}
-      - {x: 2.9136434, y: 2.7897873}
-      - {x: 2.44, y: 2.92825}
-      - {x: 2.36, y: 3.19825}
-      - {x: 2.34, y: 3.25825}
-      - {x: 2.18, y: 3.24825}
-      - {x: 1.89, y: 3.20825}
-      - {x: 1.87, y: 3.14825}
-      - {x: 1.86, y: 2.98825}
-      - {x: 1.75, y: 2.8582501}
-      - {x: 1.56, y: 2.75825}
-      - {x: 1.54, y: 3.02825}
-      - {x: 1.5, y: 3.14825}
-      - {x: 1.42, y: 3.21825}
-      - {x: 1.36, y: 3.26825}
-      - {x: 1.29, y: 3.29825}
-      - {x: 1.09, y: 3.29825}
-      - {x: 1.04, y: 3.27825}
-      - {x: 0.96999997, y: 3.23825}
-      - {x: 0.82, y: 3.0882502}
-      - {x: 0.89, y: 2.21825}
-      - {x: 0.91999996, y: 1.64825}
-      - {x: 0.93, y: 1.25825}
-      - {x: 0.94, y: 0.67824996}
-      - {x: 0.93715155, y: 0.66682124}
-      - {x: 0.93859255, y: 0.6482501}
-      - {x: 0.9400611, y: 0.60826063}
-      - {x: 0.94008386, y: 0.5782759}
-      - {x: 0.9400705, y: 0.54487133}
-      - {x: 0.9378209, y: 0.4979787}
-      - {x: 0.936566, y: 0.45615292}
-      - {x: 0.93708885, y: 0.40193582}
-      - {x: 0.94018686, y: 0.33883798}
-      - {x: 0.94328463, y: 0.2754575}
-      - {x: 0.940367, y: 0.20947587}
-      - {x: 0.9352716, y: 0.14753032}
-      - {x: 0.91400254, y: -0.009439349}
-      - {x: 0.8878473, y: -0.2051717}
-      - {x: 0.8578156, y: -0.365399}
-      - {x: 0.82840276, y: -0.51175004}
-      - {x: 0.8975568, y: -0.5429558}
-      - {x: 0.9926704, y: -0.5782652}
-      - {x: 1.155928, y: -0.6119456}
-      - {x: 1.1738763, y: -0.56520325}
-      - {x: 1.2055051, y: -0.44806933}
-      - {x: 1.2171338, y: -0.37582195}
-      - {x: 1.2385352, y: -0.25969827}
+    - - {x: 2.4732409, y: 0.119507074}
+      - {x: 2.4910586, y: 0.23380315}
+      - {x: 2.5010583, y: 0.3020426}
+      - {x: 2.5175374, y: 0.4038031}
+      - {x: 2.5357766, y: 0.54654956}
+      - {x: 2.5632412, y: 0.679085}
+      - {x: 2.580142, y: 0.77183175}
+      - {x: 2.61, y: 0.905}
+      - {x: 2.6499999, y: 1.175}
+      - {x: 2.69, y: 1.4649999}
+      - {x: 2.73, y: 1.795}
+      - {x: 2.76, y: 2.125}
+      - {x: 2.77, y: 2.315}
+      - {x: 2.78, y: 2.565}
+      - {x: 2.82, y: 2.695}
+      - {x: 2.95, y: 2.705}
+      - {x: 3.03, y: 2.645}
+      - {x: 3.06, y: 2.415}
+      - {x: 3.1, y: 2.385}
+      - {x: 3.51, y: 2.325}
+      - {x: 3.57, y: 2.415}
+      - {x: 3.62, y: 2.5049999}
+      - {x: 3.6699998, y: 2.715}
+      - {x: 3.6699998, y: 3.0149999}
+      - {x: 4.204405, y: 3.1923752}
+      - {x: 3.59, y: 3.465}
+      - {x: 3.54, y: 3.615}
+      - {x: 3.3799999, y: 3.605}
+      - {x: 3.09, y: 3.5649998}
+      - {x: 3.07, y: 3.5049999}
+      - {x: 3.07, y: 3.365}
+      - {x: 2.95, y: 3.215}
+      - {x: 2.76, y: 3.115}
+      - {x: 2.75, y: 3.3249998}
+      - {x: 2.71, y: 3.5049999}
+      - {x: 2.56, y: 3.635}
+      - {x: 2.47, y: 3.665}
+      - {x: 2.32, y: 3.665}
+      - {x: 2.24, y: 3.635}
+      - {x: 2.1699998, y: 3.595}
+      - {x: 2.02, y: 3.445}
+      - {x: 2.09, y: 2.575}
+      - {x: 2.12, y: 2.0049999}
+      - {x: 2.1299999, y: 1.615}
+      - {x: 2.1399999, y: 1.035}
+      - {x: 2.1386611, y: 1.0130281}
+      - {x: 2.136828, y: 0.9652107}
+      - {x: 2.1341505, y: 0.9173937}
+      - {x: 2.1359804, y: 0.8703511}
+      - {x: 2.1333723, y: 0.7889433}
+      - {x: 2.1357658, y: 0.70091486}
+      - {x: 2.1332302, y: 0.6276045}
+      - {x: 2.1304839, y: 0.5302782}
+      - {x: 2.1288652, y: 0.46717906}
+      - {x: 2.123725, y: 0.42950332}
+      - {x: 2.1132338, y: 0.31788468}
+      - {x: 2.0949254, y: 0.18042016}
+      - {x: 2.0746453, y: 0.070984006}
+      - {x: 2.0673225, y: 0.00077307224}
+      - {x: 2.0511968, y: -0.1026063}
+      - {x: 2.0809855, y: -0.1514095}
+      - {x: 2.143732, y: -0.18415618}
+      - {x: 2.2590141, y: -0.20612764}
+      - {x: 2.363521, y: -0.21084571}
+      - {x: 2.4080281, y: -0.13049293}
+      - {x: 2.4242964, y: -0.06500006}
+      - {x: 2.4479592, y: 0.03950715}
 --- !u!50 &193760806
 Rigidbody2D:
   serializedVersion: 4
@@ -1014,7 +1015,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 193760804}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.6, y: 1.5, z: 0}
+  m_LocalPosition: {x: -0.5, y: 1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1099,6 +1100,58 @@ Transform:
   m_PrefabParentObject: {fileID: 4058906182618132, guid: 5a7d00e21f51a4df2a404bc8392767be,
     type: 2}
   m_PrefabInternal: {fileID: 2087383314}
+--- !u!1 &217642076
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 217642078}
+  - component: {fileID: 217642077}
+  m_Layer: 0
+  m_Name: BG
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &217642077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 217642076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81d81113b329d492fa2f1db87c420f39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BGImagePrefab:
+  - {fileID: 4108300808465248, guid: 1d31b1142e64849b781043599eae2dcf, type: 2}
+  - {fileID: 4393746444552258, guid: dffe9520820714b16b968cc9b0ff76cc, type: 2}
+  - {fileID: 4989153997773488, guid: a87954d10a154447ea04a2ba5737dadb, type: 2}
+  - {fileID: 4154888685958780, guid: 3c16bb7369cd44dfc97b4b2149485c22, type: 2}
+  - {fileID: 4164729229545964, guid: c0f0189c554794eb881fe73e53c7f507, type: 2}
+  - {fileID: 4253046186111550, guid: 8a05a93d5b6c94ff0a2c8fdea78bbb52, type: 2}
+  - {fileID: 4455521806619116, guid: 1ab62cb5115034fc6a05400361923e8e, type: 2}
+  - {fileID: 4215603685004790, guid: ee07267bc4af641638f8f3342b6fbcce, type: 2}
+  BGImage: []
+  numBG: 16
+  currentBG: 0
+--- !u!4 &217642078
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 217642076}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &265613998
 Prefab:
   m_ObjectHideFlags: 0
@@ -2468,6 +2521,7 @@ GameObject:
   m_Component:
   - component: {fileID: 757475674}
   - component: {fileID: 757475673}
+  - component: {fileID: 757475675}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2496,12 +2550,29 @@ MonoBehaviour:
     inActiveSpr: {fileID: 0}
     activeSpr: {fileID: 0}
   chooseButtonHat: []
+  chooseButtonWp: []
+  chooseButtonFoot: []
   lockImg: []
+  lockImgWp: []
+  lockImgFoot: []
   buyBtn: []
+  buyBtnWp: []
+  buyBtnFoot: []
   dataHat: []
+  dataWp: []
+  dataFoot: []
   totalGold: {fileID: 0}
   FrameChoose: {fileID: 0}
   FrameUnChoose: {fileID: 0}
+  obShopWp: {fileID: 0}
+  obShopFoot: {fileID: 0}
+  obShopHat: {fileID: 0}
+  shopWpGob: {fileID: 0}
+  shopFootGob: {fileID: 0}
+  shopHatGob: {fileID: 0}
+  soundBtn: {fileID: 0}
+  soundOn: {fileID: 0}
+  soundOff: {fileID: 0}
   pausePanel: {fileID: 0}
 --- !u!4 &757475674
 Transform:
@@ -2516,6 +2587,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &757475675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 757475672}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 624f135fa561941e4ae8abc01a086dda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &800565915
 GameObject:
   m_ObjectHideFlags: 0
@@ -3897,12 +3979,29 @@ MonoBehaviour:
     inActiveSpr: {fileID: 0}
     activeSpr: {fileID: 0}
   chooseButtonHat: []
+  chooseButtonWp: []
+  chooseButtonFoot: []
   lockImg: []
+  lockImgWp: []
+  lockImgFoot: []
   buyBtn: []
+  buyBtnWp: []
+  buyBtnFoot: []
   dataHat: []
+  dataWp: []
+  dataFoot: []
   totalGold: {fileID: 0}
   FrameChoose: {fileID: 0}
   FrameUnChoose: {fileID: 0}
+  obShopWp: {fileID: 0}
+  obShopFoot: {fileID: 0}
+  obShopHat: {fileID: 0}
+  shopWpGob: {fileID: 0}
+  shopFootGob: {fileID: 0}
+  shopHatGob: {fileID: 0}
+  soundBtn: {fileID: 0}
+  soundOn: {fileID: 0}
+  soundOff: {fileID: 0}
   pausePanel: {fileID: 0}
 --- !u!1 &990462893
 GameObject:
@@ -4043,12 +4142,29 @@ MonoBehaviour:
     inActiveSpr: {fileID: 0}
     activeSpr: {fileID: 0}
   chooseButtonHat: []
+  chooseButtonWp: []
+  chooseButtonFoot: []
   lockImg: []
+  lockImgWp: []
+  lockImgFoot: []
   buyBtn: []
+  buyBtnWp: []
+  buyBtnFoot: []
   dataHat: []
+  dataWp: []
+  dataFoot: []
   totalGold: {fileID: 0}
   FrameChoose: {fileID: 0}
   FrameUnChoose: {fileID: 0}
+  obShopWp: {fileID: 0}
+  obShopFoot: {fileID: 0}
+  obShopHat: {fileID: 0}
+  shopWpGob: {fileID: 0}
+  shopFootGob: {fileID: 0}
+  shopHatGob: {fileID: 0}
+  soundBtn: {fileID: 0}
+  soundOn: {fileID: 0}
+  soundOff: {fileID: 0}
   pausePanel: {fileID: 0}
 --- !u!1001 &1016231233
 Prefab:
@@ -5389,12 +5505,29 @@ MonoBehaviour:
     inActiveSpr: {fileID: 0}
     activeSpr: {fileID: 0}
   chooseButtonHat: []
+  chooseButtonWp: []
+  chooseButtonFoot: []
   lockImg: []
+  lockImgWp: []
+  lockImgFoot: []
   buyBtn: []
+  buyBtnWp: []
+  buyBtnFoot: []
   dataHat: []
+  dataWp: []
+  dataFoot: []
   totalGold: {fileID: 0}
   FrameChoose: {fileID: 0}
   FrameUnChoose: {fileID: 0}
+  obShopWp: {fileID: 0}
+  obShopFoot: {fileID: 0}
+  obShopHat: {fileID: 0}
+  shopWpGob: {fileID: 0}
+  shopFootGob: {fileID: 0}
+  shopHatGob: {fileID: 0}
+  soundBtn: {fileID: 0}
+  soundOn: {fileID: 0}
+  soundOff: {fileID: 0}
   pausePanel: {fileID: 670679421}
 --- !u!1001 &1298988148
 Prefab:
@@ -6092,12 +6225,29 @@ MonoBehaviour:
     inActiveSpr: {fileID: 0}
     activeSpr: {fileID: 0}
   chooseButtonHat: []
+  chooseButtonWp: []
+  chooseButtonFoot: []
   lockImg: []
+  lockImgWp: []
+  lockImgFoot: []
   buyBtn: []
+  buyBtnWp: []
+  buyBtnFoot: []
   dataHat: []
+  dataWp: []
+  dataFoot: []
   totalGold: {fileID: 0}
   FrameChoose: {fileID: 0}
   FrameUnChoose: {fileID: 0}
+  obShopWp: {fileID: 0}
+  obShopFoot: {fileID: 0}
+  obShopHat: {fileID: 0}
+  shopWpGob: {fileID: 0}
+  shopFootGob: {fileID: 0}
+  shopHatGob: {fileID: 0}
+  soundBtn: {fileID: 0}
+  soundOn: {fileID: 0}
+  soundOff: {fileID: 0}
   pausePanel: {fileID: 670679421}
 --- !u!114 &1473347896
 MonoBehaviour:
@@ -6284,12 +6434,29 @@ MonoBehaviour:
     inActiveSpr: {fileID: 0}
     activeSpr: {fileID: 0}
   chooseButtonHat: []
+  chooseButtonWp: []
+  chooseButtonFoot: []
   lockImg: []
+  lockImgWp: []
+  lockImgFoot: []
   buyBtn: []
+  buyBtnWp: []
+  buyBtnFoot: []
   dataHat: []
+  dataWp: []
+  dataFoot: []
   totalGold: {fileID: 0}
   FrameChoose: {fileID: 0}
   FrameUnChoose: {fileID: 0}
+  obShopWp: {fileID: 0}
+  obShopFoot: {fileID: 0}
+  obShopHat: {fileID: 0}
+  shopWpGob: {fileID: 0}
+  shopFootGob: {fileID: 0}
+  shopHatGob: {fileID: 0}
+  soundBtn: {fileID: 0}
+  soundOn: {fileID: 0}
+  soundOff: {fileID: 0}
   pausePanel: {fileID: 670679421}
 --- !u!114 &1498372351
 MonoBehaviour:
@@ -7051,7 +7218,7 @@ GameObject:
   - component: {fileID: 1711459100}
   m_Layer: 0
   m_Name: Character
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7092,7 +7259,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.01, y: 1.51}
+    oldSize: {x: 5, y: 5}
     newSize: {x: 20, y: 12.37}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
