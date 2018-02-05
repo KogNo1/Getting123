@@ -14,7 +14,6 @@ public class CheckPoint : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		checkpointValue = SaveManager.instance.state.checkpoint;
-
 		transform.position = checkpointList [checkpointValue].transform.position;
 		stick.transform.position = checkpointList [checkpointValue].transform.position + new Vector3 (0.6f, 1.5f, 0);
 	}
@@ -26,11 +25,8 @@ public class CheckPoint : MonoBehaviour {
 		if (other.gameObject.tag == "CheckPoint") 
 		{
 			int temp = int.Parse (other.transform.name);
-			if (temp > checkpointValue) 
-			{
-				SaveManager.instance.state.checkpoint = temp;
-				SaveManager.instance.Save ();
-			}
+			SaveManager.instance.state.checkpoint = temp;
+			SaveManager.instance.Save ();
 		}
 	}
 }
