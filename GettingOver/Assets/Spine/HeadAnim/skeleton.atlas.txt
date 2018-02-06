@@ -1,0 +1,41 @@
+
+skeleton.png
+size: 561,249
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+eye-close
+  rotate: true
+  xy: 515, 95
+  size: 152, 44
+  orig: 152, 44
+  offset: 0, 0
+  index: -1
+eye-open
+  rotate: true
+  xy: 456, 97
+  size: 150, 57
+  orig: 150, 57
+  offset: 0, 0
+  index: -1
+hair-fuking-down
+  rotate: false
+  xy: 241, 2
+  size: 213, 245
+  orig: 213, 245
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 2, 9
+  size: 237, 238
+  orig: 237, 238
+  offset: 0, 0
+  index: -1
+mouth-01
+  rotate: true
+  xy: 456, 35
+  size: 60, 33
+  orig: 60, 33
+  offset: 0, 0
+  index: -1
