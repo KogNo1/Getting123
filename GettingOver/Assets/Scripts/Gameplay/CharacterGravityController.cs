@@ -39,8 +39,6 @@ public class CharacterGravityController : MonoBehaviour {
 			rbBody.gravityScale = 1;
 			time = 0;
 		}
-
-		Debug.Log (playSoundOne);
 	}
 
 	void OnCollisionEnter2D(Collision2D other){

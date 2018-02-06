@@ -132,7 +132,7 @@ public class UIManager : MonoBehaviour {
 	void Start () {
 		//CheckItemChosen ();
 		CheckStatus ();
-
+		CheckSound ();
 		DisplayTotalGold ();
 	}
 
@@ -231,17 +231,20 @@ public class UIManager : MonoBehaviour {
 		if (SaveManager.instance.state.statusSound) {
 			SaveManager.instance.state.statusSound = false;
 			soundBtn.sprite = soundOff;
+			SoundManager.MuteAll ();
 			SaveManager.instance.Save ();
 		}
 		else if(SaveManager.instance.state.statusSound == false){
 			SaveManager.instance.state.statusSound = true;
 			soundBtn.sprite = soundOn;
+			SoundManager.DontMuteAll ();
 			SaveManager.instance.Save ();
 		}
 	}
 
 	void CheckSound() {
 		if (soundBtn != null) {
+			Debug.Log (SaveManager.instance.state.statusSound);
 			if (SaveManager.instance.state.statusSound)
 				soundBtn.sprite = soundOn;
 			else
