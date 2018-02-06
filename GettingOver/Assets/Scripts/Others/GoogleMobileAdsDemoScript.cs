@@ -437,15 +437,22 @@ public class GoogleMobileAdsDemoScript : MonoBehaviour
     public void HandleRewardBasedVideoClosed(object sender, EventArgs args)
     {
 		ChangeCharacterEquipment.timer = 0;
+
+		if (isReward) {
+			SaveManager.instance.state.gold += 20;
+			SaveManager.instance.Save ();
+			isReward = false;
+		}
+
 		RequestRewardBasedVideo ();
         MonoBehaviour.print("HandleRewardBasedVideoClosed event received");
     }
-
+	
+	bool isReward = false;
     public void HandleRewardBasedVideoRewarded(object sender, Reward args)
     {
-		SaveManager.instance.state.gold += 20;
-		SaveManager.instance.Save ();
 
+		isReward = true;
         string type = args.Type;
         double amount = args.Amount;
         MonoBehaviour.print(
