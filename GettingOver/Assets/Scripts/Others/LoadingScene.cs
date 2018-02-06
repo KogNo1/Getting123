@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LoadingScene : MonoBehaviour {
 
-	//public static GoogleMobileAdsDemoScript ads = new GoogleMobileAdsDemoScript();
+	public static GoogleMobileAdsDemoScript ads = new GoogleMobileAdsDemoScript();
 
 	public static bool showInter;
 
@@ -29,15 +29,14 @@ public class LoadingScene : MonoBehaviour {
 			loadTime = Time.time;
 		}
 
-		//ads.RequestBanner ();
-		//ads.RequestInterstitial ();
-		//ads.RequestRewardBasedVideo ();
-		//ads.RequestRewardBasedVideo ();
+		ads.RequestBanner ();
+		ads.RequestInterstitial ();
+		ads.RequestRewardBasedVideo ();
+
 		SaveManager.instance.state.isUnlockItemHat[0] = true;
 		SaveManager.instance.state.isUnlockItemWp [0] = true;
 		SaveManager.instance.state.isUnlockItemFoot [0] = true;
 		SaveManager.instance.Save ();
-//		StartCoroutine (Loading ());
 	}
 
 	void Update () {
@@ -48,21 +47,10 @@ public class LoadingScene : MonoBehaviour {
 		if (Time.time > LogoTime && loadTime != 0) {
 			fadeGroup.alpha = Time.time - LogoTime;
 			if (fadeGroup.alpha >= 1) {
+				ads.ShowBanner ();
 				UnityEngine.SceneManagement.SceneManager.LoadScene("MenuScene");
 			}
 		}
-	}
-
-	IEnumerator Loading()
-	{
-		for (int i = 0; i < 120; i++)
-		{
-			yield return new WaitForEndOfFrame();
-		}
-		//ads.ShowBanner ();
-		//ads.ShowInterstitial ();
-		//ads.ShowRewardBasedVideo ();
-		UnityEngine.SceneManagement.SceneManager.LoadScene("MenuScene");
 	}
 
 	void BackFadeFirstTime(){

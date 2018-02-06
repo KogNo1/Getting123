@@ -99,6 +99,12 @@ public class UIManager : MonoBehaviour {
 	[SerializeField]
 	GameObject shopGroup;
 
+	[Header("Link rate share")]
+	[SerializeField]
+	string linkRate;
+	[SerializeField]
+	string linkShare;
+
 	void Awake() {
 		if (bgIp != null && bgIpad != null && bgIpx != null) {
 			if (MultiResolution.device == "iphone") {
@@ -201,11 +207,11 @@ public class UIManager : MonoBehaviour {
 	}
 
 	void Rate(){
-		Application.OpenURL ("");
+		Application.OpenURL (linkRate);
 	}
 
 	void Share(){
-		Application.OpenURL ("");
+		Application.OpenURL (linkShare);
 	}
 
 	void Sound(){
@@ -285,6 +291,8 @@ public class UIManager : MonoBehaviour {
 	}
 
 	void RestartButton(){
+		LoadingScene.ads.ShowInterstitial ();
+		LoadingScene.ads.RequestInterstitial ();
 		UnityEngine.SceneManagement.SceneManager.LoadScene ("Gameplay");
 	}
 
