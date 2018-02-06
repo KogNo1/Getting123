@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour {
 
-	enum BtnHandle { none, playGame, shop, rate, share, sound, shopHat, shopWp, shopFoot, shopBrand, pause, home, restart, continueButton }
+	enum BtnHandle { none, playGame, shop, rate, share, sound, shopHat, shopWp, shopFoot, shopBrand, pause, home, restart, continueButton, rewardCoin }
 
 	enum IsSceneName { none, Menu, ShopHat, ShopWeapon, ShopFoot}
 
@@ -179,6 +179,9 @@ public class UIManager : MonoBehaviour {
 		case BtnHandle.continueButton:
 			ContinueButton ();
 			break;
+		case BtnHandle.rewardCoin:
+			RewardCoin ();
+			break;
 		}
 	}
 
@@ -212,6 +215,10 @@ public class UIManager : MonoBehaviour {
 
 	void Share(){
 		Application.OpenURL (linkShare);
+	}
+
+	void RewardCoin() {
+		LoadingScene.ads.ShowRewardBasedVideo ();
 	}
 
 	void Sound(){

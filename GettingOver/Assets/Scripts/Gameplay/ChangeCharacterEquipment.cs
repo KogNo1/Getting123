@@ -31,6 +31,12 @@ public class ChangeCharacterEquipment : MonoBehaviour {
 	[SerializeField]
 	EventTrigger leftButton;
 
+	[Header("Reward button")]
+	[SerializeField]
+	GameObject rewardBtn;
+
+	public static float timer;
+
 	// Use this for initialization
 	void Awake () {
 		for (int i = 0; i < weapons.Length; i++) {
@@ -64,5 +70,13 @@ public class ChangeCharacterEquipment : MonoBehaviour {
 		}
 		Hat.sprite = hatSprite [SaveManager.instance.state.indexHat];
 		Foot.sprite = footSprite [SaveManager.instance.state.indexFoot];
+	}
+
+	void Update() {
+		timer += Time.deltaTime;
+		if (timer >= 60) {
+			rewardBtn.SetActive (true);
+		} else
+			rewardBtn.SetActive (false);
 	}
 }
