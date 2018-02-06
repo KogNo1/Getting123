@@ -145,6 +145,7 @@ public class UIManager : MonoBehaviour {
 	}
 
 	public void UnpressButton() {
+		SoundManager.Clicks.Play ();
 		uiAnis.MinimizeTarget ();
 
 		switch (btnHandle) {
@@ -186,6 +187,7 @@ public class UIManager : MonoBehaviour {
 	}
 
 	public void UnpressButton2() {
+		SoundManager.Clicks.Play ();
 		uiAnis.MinimizeTarget2 ();
 
 		switch (btnHandle) {
@@ -202,10 +204,12 @@ public class UIManager : MonoBehaviour {
 	}
 
 	void PlayGame() {
+		SoundManager.Clicks.Play ();
 		UnityEngine.SceneManagement.SceneManager.LoadScene ("Gameplay");
 	}
 
 	void Shop() {
+		SoundManager.Clicks.Play ();
 		UnityEngine.SceneManagement.SceneManager.LoadScene ("ShopScene");
 	}
 
@@ -218,10 +222,12 @@ public class UIManager : MonoBehaviour {
 	}
 
 	void RewardCoin() {
+		SoundManager.Clicks.Play ();
 		LoadingScene.ads.ShowRewardBasedVideo ();
 	}
 
 	void Sound(){
+		SoundManager.Clicks.Play ();
 		if (SaveManager.instance.state.statusSound) {
 			SaveManager.instance.state.statusSound = false;
 			soundBtn.sprite = soundOff;
@@ -244,10 +250,13 @@ public class UIManager : MonoBehaviour {
 	}
 
 	public void BackButton(string nameBackScene) {
+		SoundManager.Clicks.Play ();
 		UnityEngine.SceneManagement.SceneManager.LoadScene (nameBackScene);
 	}
 
 	void ChangeShopHat(){
+		SoundManager.Clicks.Play ();
+
 		obShopWp.enabled = true;
 		obShopWp.GetComponent<UnityEngine.UI.Image> ().sprite = FrameUnChoose;
 		shopWpGob.SetActive (false);
@@ -262,6 +271,8 @@ public class UIManager : MonoBehaviour {
 	}
 
 	void ChangeShopWp(){
+		SoundManager.Clicks.Play ();
+
 		obShopWp.enabled = false;
 		obShopWp.GetComponent<UnityEngine.UI.Image> ().sprite = FrameChoose;
 		shopWpGob.SetActive (true);
@@ -276,6 +287,8 @@ public class UIManager : MonoBehaviour {
 	}
 
 	void ChangeShopFoot(){
+		SoundManager.Clicks.Play ();
+
 		obShopWp.enabled = true;
 		obShopWp.GetComponent<UnityEngine.UI.Image> ().sprite = FrameUnChoose;
 		shopWpGob.SetActive (false);
@@ -290,24 +303,29 @@ public class UIManager : MonoBehaviour {
 	}
 
 	void PauseButton(){
+		SoundManager.Clicks.Play ();
 		pausePanel.SetActive (true);
 	}
 
 	void HomeButton(){
+		SoundManager.Clicks.Play ();
 		UnityEngine.SceneManagement.SceneManager.LoadScene ("MenuScene");
 	}
 
 	void RestartButton(){
+		SoundManager.Clicks.Play ();
 		LoadingScene.ads.ShowInterstitial ();
 		LoadingScene.ads.RequestInterstitial ();
 		UnityEngine.SceneManagement.SceneManager.LoadScene ("Gameplay");
 	}
 
 	void ContinueButton(){
+		SoundManager.Clicks.Play ();
 		pausePanel.SetActive (false);
 	}
 
 	public void ItemChosen(int indexItem) {
+		SoundManager.Clicks.Play ();
 		switch(isSceneName) {
 			case IsSceneName.ShopHat:
 				if (SaveManager.instance.state.isUnlockItemHat [indexItem]) {
@@ -423,6 +441,7 @@ public class UIManager : MonoBehaviour {
 	}
 
 	public void BuyItem(int indexItem){
+		SoundManager.Clicks.Play ();
 		switch(isSceneName) {
 			case IsSceneName.ShopHat:
 				if (SaveManager.instance.state.gold >= dataHat[indexItem].dataObject.price) {

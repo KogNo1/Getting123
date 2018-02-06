@@ -14,6 +14,8 @@ public class SoundManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		DontDestroyOnLoad (gameObject);
+
 		Hits = Hit;
 		Clicks = Click;
 		Coins = Coin;

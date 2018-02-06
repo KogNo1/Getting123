@@ -17,6 +17,8 @@ public class CharacterGravityController : MonoBehaviour {
 
 	float time;
 
+	bool playSoundOne;
+
 	public static bool handGround, assground;
 
 	// Use this for initialization
@@ -37,6 +39,8 @@ public class CharacterGravityController : MonoBehaviour {
 			rbBody.gravityScale = 1;
 			time = 0;
 		}
+
+		Debug.Log (playSoundOne);
 	}
 
 	void OnCollisionEnter2D(Collision2D other){
@@ -47,6 +51,27 @@ public class CharacterGravityController : MonoBehaviour {
 				break;
 			case HandAndAss.Hand:
 				CharacterGravityController.handGround = true;
+				break;
+			}
+		}
+
+		if (other.gameObject.tag == "Elements") {
+			switch (handle) {
+			case HandAndAss.Hand:
+				if (!playSoundOne) {
+					SoundManager.Hits.Play ();
+					playSoundOne = true;
+				}
+				break;
+			}
+		}
+	}
+
+	void OnCollisionStay2D(Collision2D other){
+		if (other.gameObject.tag == "Elements") {
+			switch (handle) {
+			case HandAndAss.Hand:
+				playSoundOne = true;
 				break;
 			}
 		}
@@ -63,5 +88,18 @@ public class CharacterGravityController : MonoBehaviour {
 				break;
 			}
 		}
+
+		if (other.gameObject.tag == "Elements") {
+			switch (handle) {
+			case HandAndAss.Hand:
+				StartCoroutine (WaitSound ());
+				break;
+			}
+		}
+	}
+
+	IEnumerator WaitSound(){
+		yield return new WaitForSeconds (1f);
+		playSoundOne = false;
 	}
 }
