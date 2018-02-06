@@ -60,17 +60,13 @@ public class BGLoop : MonoBehaviour {
 
 		if (isMoveMap) {
 			MoveMap ();
-			for (int i = 0; i < listCoin.Length; i++) 
-			{
-				if (!listCoin [i].activeSelf)
-					listCoin [i].SetActive (true);
-			}
 		}
 	}
 
 	void MoveMap(){
 		if (SaveManager.instance.state.checkpoint == 7) {
 			if (isChange1) {
+				ResetCoin ();
 				if (!firstChangeMap1) {
 					Maps [0].position = new Vector3 (639.2f, 0, 0);
 					firstChangeMap1 = true;
@@ -81,6 +77,7 @@ public class BGLoop : MonoBehaviour {
 			}
 		} else if (SaveManager.instance.state.checkpoint == 3) {
 			if (isChange2) {
+				ResetCoin ();
 				if (!firstChangeMap2) {
 					Maps [1].position = new Vector3 (639.5f, 0, 0);
 					firstChangeMap2 = true;
@@ -91,5 +88,15 @@ public class BGLoop : MonoBehaviour {
 			}
 		}
 		isMoveMap = false;
+	}
+
+	// Reset coin when loop the BG
+	void ResetCoin ()
+	{
+		for (int i = 0; i < listCoin.Length; i++) 
+		{
+			if (!listCoin [i].activeSelf)
+				listCoin [i].SetActive (true);
+		}
 	}
 }

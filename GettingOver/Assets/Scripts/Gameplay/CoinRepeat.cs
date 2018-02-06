@@ -8,5 +8,6 @@ public class CoinRepeat : MonoBehaviour {
 		transform.gameObject.SetActive (false);
 		SaveManager.instance.state.gold++;
 		SaveManager.instance.Save ();
+		SoundManager.Coins.Play ();
 	}
 }
