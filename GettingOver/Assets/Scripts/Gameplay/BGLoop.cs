@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BGLoop : MonoBehaviour {
 
+	[Header("BG Options")]
 	[SerializeField]
 	List<Transform> BGImagePrefab = new List<Transform>();
 	[SerializeField]
@@ -18,8 +19,19 @@ public class BGLoop : MonoBehaviour {
 	[SerializeField]
 	int currentBG;
 
+	[Header("Map Options")]
+	[SerializeField]
+	List<Transform> Maps = new List<Transform>();
+
+	public static bool isMoveMap;
+
+	bool isChange1, isChange2, firstChangeMap1, firstChangeMap2;
+
 	// Use this for initialization
 	void Start () {
+		isMoveMap = false;
+		isChange1 = true;
+		isChange2 = false;
 		currentBG = 0;
 		for (int i = 0; i < numBG; i++) {
 			if (currentBG < BGImagePrefab.Count){
@@ -42,5 +54,34 @@ public class BGLoop : MonoBehaviour {
 		for (int i = 0; i < BGImage.Count; i++) {
 			BGImage [i].SetParent (BG);
 		}
+
+		if (isMoveMap) {
+			MoveMap ();
+		}
+	}
+
+	void MoveMap(){
+		if (SaveManager.instance.state.checkpoint == 7) {
+			if (isChange1) {
+				if (!firstChangeMap1) {
+					Maps [0].position = new Vector3 (639.2f, 0, 0);
+					firstChangeMap1 = true;
+				} else
+					Maps [0].position = new Vector3 (Maps [0].position.x + 639.2f, 0, 0);
+				isChange1 = false;
+				isChange2 = true;
+			}
+		} else if (SaveManager.instance.state.checkpoint == 3) {
+			if (isChange2) {
+				if (!firstChangeMap2) {
+					Maps [1].position = new Vector3 (639.5f, 0, 0);
+					firstChangeMap2 = true;
+				} else
+					Maps [1].position = new Vector3 (Maps [1].position.x + 639.5f, 0, 0);
+				isChange2 = false;
+				isChange1 = true;
+			}
+		}
+		isMoveMap = false;
 	}
 }

@@ -1137,9 +1137,12 @@ MonoBehaviour:
   - {fileID: 4455521806619116, guid: 1ab62cb5115034fc6a05400361923e8e, type: 2}
   - {fileID: 4215603685004790, guid: ee07267bc4af641638f8f3342b6fbcce, type: 2}
   BGImage: []
-  BG: {fileID: 0}
+  BG: {fileID: 217642078}
   numBG: 100
   currentBG: 0
+  Maps:
+  - {fileID: 1874361249}
+  - {fileID: 462672160}
 --- !u!4 &217642078
 Transform:
   m_ObjectHideFlags: 0

@@ -27,6 +27,7 @@ public class CheckPoint : MonoBehaviour {
 			int temp = int.Parse (other.transform.name);
 			SaveManager.instance.state.checkpoint = temp;
 			SaveManager.instance.Save ();
+			BGLoop.isMoveMap = true;
 		}
 	}
 }
