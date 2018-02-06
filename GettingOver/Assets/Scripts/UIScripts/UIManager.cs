@@ -105,6 +105,10 @@ public class UIManager : MonoBehaviour {
 	[SerializeField]
 	string linkShare;
 
+	[Header("Button Reward")]
+	[SerializeField]
+	GameObject rewardBtn;
+
 	void Awake() {
 		if (bgIp != null && bgIpad != null && bgIpx != null) {
 			if (MultiResolution.device == "iphone") {
@@ -224,6 +228,7 @@ public class UIManager : MonoBehaviour {
 	void RewardCoin() {
 		SoundManager.Clicks.Play ();
 		LoadingScene.ads.ShowRewardBasedVideo ();
+		rewardBtn.SetActive (false);
 	}
 
 	void Sound(){
@@ -313,6 +318,7 @@ public class UIManager : MonoBehaviour {
 	void HomeButton(){
 		SoundManager.Clicks.Play ();
 		UnityEngine.SceneManagement.SceneManager.LoadScene ("MenuScene");
+		SoundManager.BGMs.Stop ();
 	}
 
 	void RestartButton(){
@@ -320,6 +326,7 @@ public class UIManager : MonoBehaviour {
 		LoadingScene.ads.ShowInterstitial ();
 		LoadingScene.ads.RequestInterstitial ();
 		UnityEngine.SceneManagement.SceneManager.LoadScene ("Gameplay");
+		SoundManager.BGMs.Stop ();
 	}
 
 	void ContinueButton(){

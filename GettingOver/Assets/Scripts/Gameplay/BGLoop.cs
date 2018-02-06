@@ -32,6 +32,7 @@ public class BGLoop : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		SoundManager.BGMs.Play ();
 		isMoveMap = false;
 		isChange1 = true;
 		isChange2 = false;

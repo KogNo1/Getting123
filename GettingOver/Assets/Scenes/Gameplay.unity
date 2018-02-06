@@ -2984,6 +2984,7 @@ MonoBehaviour:
   shopGroup: {fileID: 0}
   linkRate: 
   linkShare: 
+  rewardBtn: {fileID: 0}
 --- !u!4 &757475674
 Transform:
   m_ObjectHideFlags: 0
@@ -4584,6 +4585,7 @@ MonoBehaviour:
   shopGroup: {fileID: 0}
   linkRate: 
   linkShare: 
+  rewardBtn: {fileID: 0}
 --- !u!1 &990462893
 GameObject:
   m_ObjectHideFlags: 0
@@ -4753,6 +4755,7 @@ MonoBehaviour:
   shopGroup: {fileID: 0}
   linkRate: 
   linkShare: 
+  rewardBtn: {fileID: 0}
 --- !u!1001 &1016231233
 Prefab:
   m_ObjectHideFlags: 0
@@ -6561,6 +6564,7 @@ MonoBehaviour:
   shopGroup: {fileID: 0}
   linkRate: 
   linkShare: 
+  rewardBtn: {fileID: 0}
 --- !u!1001 &1298988148
 Prefab:
   m_ObjectHideFlags: 0
@@ -7844,6 +7848,7 @@ MonoBehaviour:
   shopGroup: {fileID: 0}
   linkRate: 
   linkShare: 
+  rewardBtn: {fileID: 0}
 --- !u!114 &1473347896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8059,6 +8064,7 @@ MonoBehaviour:
   shopGroup: {fileID: 0}
   linkRate: 
   linkShare: 
+  rewardBtn: {fileID: 0}
 --- !u!114 &1498372351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8441,6 +8447,7 @@ MonoBehaviour:
   shopGroup: {fileID: 0}
   linkRate: 
   linkShare: 
+  rewardBtn: {fileID: 1521413765}
 --- !u!114 &1521413771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10300,7 +10307,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
 --- !u!33 &1930359475
 MeshFilter:
   m_ObjectHideFlags: 0

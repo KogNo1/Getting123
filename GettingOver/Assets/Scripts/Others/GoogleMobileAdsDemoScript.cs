@@ -274,7 +274,13 @@ public class GoogleMobileAdsDemoScript : MonoBehaviour
 
 		rewardBasedVideo = RewardBasedVideoAd.Instance;
 
-		rewardBasedVideo.OnAdLeavingApplication += this.HandleRewardBasedVideoLeftApplication;
+		this.rewardBasedVideo.OnAdLoaded += this.HandleRewardBasedVideoLoaded;
+		this.rewardBasedVideo.OnAdFailedToLoad += this.HandleRewardBasedVideoFailedToLoad;
+		this.rewardBasedVideo.OnAdOpening += this.HandleRewardBasedVideoOpened;
+		this.rewardBasedVideo.OnAdStarted += this.HandleRewardBasedVideoStarted;
+		this.rewardBasedVideo.OnAdRewarded += this.HandleRewardBasedVideoRewarded;
+		this.rewardBasedVideo.OnAdClosed += this.HandleRewardBasedVideoClosed;
+		this.rewardBasedVideo.OnAdLeavingApplication += this.HandleRewardBasedVideoLeftApplication;
 
 		AdRequest request = new AdRequest.Builder().Build();
 		rewardBasedVideo.LoadAd(request, adUnitId);
