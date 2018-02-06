@@ -10,6 +10,9 @@ public class BGLoop : MonoBehaviour {
 	List<Transform> BGImage = new List<Transform>();
 
 	[SerializeField]
+	Transform BG;
+
+	[SerializeField]
 	int numBG;
 
 	[SerializeField]
@@ -34,6 +37,10 @@ public class BGLoop : MonoBehaviour {
 	void Update () {
 		for (int i = 1; i < BGImage.Count; i++) {
 			BGImage [i].position = new Vector3 (BGImage [i - 1].position.x + 88, 5, 0);
+		}
+
+		for (int i = 0; i < BGImage.Count; i++) {
+			BGImage [i].SetParent (BG);
 		}
 	}
 }
