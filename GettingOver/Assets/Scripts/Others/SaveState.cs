@@ -2,7 +2,7 @@
 
 	public int gold = 100000;
 
-	public bool statusSound;
+	public bool statusSound = true;
 	public int indexHat;
 	public int indexWp;
 	public int indexFoot;

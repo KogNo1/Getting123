@@ -4,17 +4,45 @@ using UnityEngine;
 
 public class MainMenuScene : MonoBehaviour {
 
+	[SerializeField]
 	private CanvasGroup fadeGroup;
 	private float loadTime;
 	private float fadeSpeed = 1f;
 
+	[Header("Background")]
+	[SerializeField]
+	GameObject bgIp;
+	[SerializeField]
+	GameObject bgIpx;
+	[SerializeField]
+	GameObject bgIpad;
+
 	// Use this for initialization
 	void Start () {
-		fadeGroup = FindObjectOfType<CanvasGroup> ();
+
+		if (MultiResolution.device == "iphone") {
+			bgIp.SetActive (true);
+			bgIpad.SetActive (false);
+			bgIpx.SetActive (false);
+		}
+		if (MultiResolution.device == "iphonex") {
+			bgIp.SetActive (false);
+			bgIpad.SetActive (false);
+			bgIpx.SetActive (true);
+		}
+		if (MultiResolution.device == "ipad") {
+			bgIp.SetActive (false);
+			bgIpad.SetActive (true);
+			bgIpx.SetActive (false);
+		}
+
+		//fadeGroup = FindObjectOfType<CanvasGroup> ();
 		if (SaveManager.instance.state.fadeInOut == false) {
-			fadeGroup.alpha = 1;
+			if (fadeGroup != null)
+				fadeGroup.alpha = 1;
 		} else {
-			fadeGroup.alpha = 0;
+			if (fadeGroup != null)
+				fadeGroup.alpha = 0;
 		}
 	}
 

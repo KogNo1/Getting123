@@ -87,8 +87,39 @@ public class UIManager : MonoBehaviour {
 	[SerializeField]
 	GameObject pausePanel;
 
+	[Header("Background")]
+	[SerializeField]
+	GameObject bgIp;
+	[SerializeField]
+	GameObject bgIpx;
+	[SerializeField]
+	GameObject bgIpad;
+
+	[Header("Group shop")]
+	[SerializeField]
+	GameObject shopGroup;
+
 	void Awake() {
-		
+		if (bgIp != null && bgIpad != null && bgIpx != null) {
+			if (MultiResolution.device == "iphone") {
+				bgIp.SetActive (true);
+				bgIpad.SetActive (false);
+				bgIpx.SetActive (false);
+				shopGroup.transform.localScale = new Vector3 (1f, 1f, 1);
+			}
+			if (MultiResolution.device == "iphonex") {
+				bgIp.SetActive (false);
+				bgIpad.SetActive (false);
+				bgIpx.SetActive (true);
+				shopGroup.transform.localScale = new Vector3 (0.8f, 0.8f, 1);
+			}
+			if (MultiResolution.device == "ipad") {
+				bgIp.SetActive (false);
+				bgIpad.SetActive (true);
+				bgIpx.SetActive (false);
+				shopGroup.transform.localScale = new Vector3 (1f, 1f, 1);
+			}
+		}
 	}
 
 	// Use this for initialization
@@ -182,7 +213,8 @@ public class UIManager : MonoBehaviour {
 			SaveManager.instance.state.statusSound = false;
 			soundBtn.sprite = soundOff;
 			SaveManager.instance.Save ();
-		} else if(SaveManager.instance.state.statusSound == false){
+		}
+		else if(SaveManager.instance.state.statusSound == false){
 			SaveManager.instance.state.statusSound = true;
 			soundBtn.sprite = soundOn;
 			SaveManager.instance.Save ();
