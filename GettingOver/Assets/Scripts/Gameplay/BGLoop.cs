@@ -19,6 +19,9 @@ public class BGLoop : MonoBehaviour {
 	[SerializeField]
 	int currentBG;
 
+	[SerializeField]
+	GameObject[] listCoin;
+
 	[Header("Map Options")]
 	[SerializeField]
 	List<Transform> Maps = new List<Transform>();
@@ -57,6 +60,11 @@ public class BGLoop : MonoBehaviour {
 
 		if (isMoveMap) {
 			MoveMap ();
+			for (int i = 0; i < listCoin.Length; i++) 
+			{
+				if (!listCoin [i].activeSelf)
+					listCoin [i].SetActive (true);
+			}
 		}
 	}
 
