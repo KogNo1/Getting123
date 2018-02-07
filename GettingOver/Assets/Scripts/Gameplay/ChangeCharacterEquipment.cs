@@ -19,11 +19,9 @@ public class ChangeCharacterEquipment : MonoBehaviour {
 
 	[Header("Weapon")]
 	[SerializeField]
-	GameObject[] weapons;
-
-	[Header("Character hinge joint")]
+	SpriteRenderer weapon;
 	[SerializeField]
-	HingeJoint2D hingeOfCharacter;
+	Sprite[] weaponsSpr;
 
 	[Header("EventTrigger Button Control")]
 	[SerializeField]
@@ -37,46 +35,59 @@ public class ChangeCharacterEquipment : MonoBehaviour {
 
 	public static float timer;
 
+	[Header("MoveHand")]
+	[SerializeField]
+	MoveHand moveHand;
+
+	[Header("Collider")]
+	[SerializeField]
+	PolygonCollider2D[] colliderWeapons;
+
+
 	// Use this for initialization
 	void Awake () {
-		for (int i = 0; i < weapons.Length; i++) {
-			if (i == SaveManager.instance.state.indexWp) {
-				weapons [i].SetActive (true);
-				hingeOfCharacter.connectedBody = weapons [i].GetComponent<Rigidbody2D> ();
+		weapon.sprite = weaponsSpr [SaveManager.instance.state.indexWp];
 
-				MoveHand moveHand = weapons [i].GetComponent<MoveHand> ();
+		EventTrigger.Entry entryMoveRight = new EventTrigger.Entry();
+		entryMoveRight.eventID = EventTriggerType.PointerDown;
+		entryMoveRight.callback.AddListener( (eventData) => { moveHand.MoveRight(); } );
 
-				EventTrigger.Entry entryMoveRight = new EventTrigger.Entry();
-				entryMoveRight.eventID = EventTriggerType.PointerDown;
-				entryMoveRight.callback.AddListener( (eventData) => { moveHand.MoveRight(); } );
+		rightButton.triggers.Add (entryMoveRight);
 
-				rightButton.triggers.Add (entryMoveRight);
+		EventTrigger.Entry entryMoveLeft = new EventTrigger.Entry();
+		entryMoveLeft.eventID = EventTriggerType.PointerDown;
+		entryMoveLeft.callback.AddListener( (eventData) => { moveHand.MoveLeft(); } );
 
-				EventTrigger.Entry entryMoveLeft = new EventTrigger.Entry();
-				entryMoveLeft.eventID = EventTriggerType.PointerDown;
-				entryMoveLeft.callback.AddListener( (eventData) => { moveHand.MoveLeft(); } );
+		leftButton.triggers.Add (entryMoveLeft);
 
-				leftButton.triggers.Add (entryMoveLeft);
+		EventTrigger.Entry entryPointUp = new EventTrigger.Entry();
+		entryPointUp.eventID = EventTriggerType.PointerUp;
+		entryPointUp.callback.AddListener( (eventData) => { moveHand.pointUp(); } );
 
-				EventTrigger.Entry entryPointUp = new EventTrigger.Entry();
-				entryPointUp.eventID = EventTriggerType.PointerUp;
-				entryPointUp.callback.AddListener( (eventData) => { moveHand.pointUp(); } );
+		rightButton.triggers.Add (entryPointUp);
+		leftButton.triggers.Add (entryPointUp);
 
-				rightButton.triggers.Add (entryPointUp);
-				leftButton.triggers.Add (entryPointUp);
-			}
+
+
+		for (int i = 0; i < colliderWeapons.Length; i++) {
+			if (i == SaveManager.instance.state.indexWp)
+				colliderWeapons [i].enabled = true;
 			else
-				weapons [i].SetActive (false);
+				colliderWeapons [i].enabled = false;
 		}
 		Hat.sprite = hatSprite [SaveManager.instance.state.indexHat];
 		Foot.sprite = footSprite [SaveManager.instance.state.indexFoot];
 	}
 
 	void Update() {
-		timer += Time.deltaTime;
-		if (timer >= 60) {
-			rewardBtn.SetActive (true);
-		} else
+		if (Application.internetReachability != NetworkReachability.NotReachable) {
+			timer += Time.deltaTime;
+			if (timer >= 60) {
+				rewardBtn.SetActive (true);
+			} else
+				rewardBtn.SetActive (false);
+		} else {
 			rewardBtn.SetActive (false);
+		}
 	}
 }

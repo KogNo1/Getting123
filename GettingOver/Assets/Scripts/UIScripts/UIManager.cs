@@ -249,7 +249,7 @@ public class UIManager : MonoBehaviour {
 
 	void CheckSound() {
 		if (soundBtn != null) {
-			Debug.Log (SaveManager.instance.state.statusSound);
+			//Debug.Log (SaveManager.instance.state.statusSound);
 			if (SaveManager.instance.state.statusSound)
 				soundBtn.sprite = soundOn;
 			else
