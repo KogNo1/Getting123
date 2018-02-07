@@ -1,6 +1,6 @@
 ﻿public class SaveState {
 
-	public int gold = 200000;
+	public int gold = 0;
 
 	public bool statusSound = true;
 	public int indexHat;
